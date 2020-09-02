@@ -1,0 +1,319 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	box-sizing: border-box
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+	
+.container
+	max-width: 1440px
+	width: 100%
+	margin: 0 auto
+	padding: 0
+
+.h1
+	font-family: 'TTNooks-Regular', sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 96px
+	line-height: 88px
+	
+.header
+	height: 115vh
+	background-size: cover
+	padding-top: 35px
+	position: relative
+	z-index: 2
+	&:before
+		position: absolute
+		top: 0
+		left: 35%
+		width: 15%
+		height: 20%
+		content: ''
+		background-image: url("../img/header-img/circle-top.png")
+		background-repeat: no-repeat
+		opacity: .3
+		z-index: 1
+	&-img
+		&-grape
+			position: absolute
+			top: 85%
+			left: 71%
+			width: 100%
+			height: 100%
+			content: ''
+			background-image: url("../img/header-img/grapes-bottom.png")
+			background-repeat: no-repeat
+			opacity: .3
+		&-circle
+			position: absolute
+			top: 80%
+			left: 88%
+			width: 100%
+			height: 100%
+			content: ''
+			background-image: url("../img/header-img/circle-bottom.png")
+			background-repeat: no-repeat
+			opacity: 1
+	&-top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 0 50px
+		z-index: 2
+		&__center
+			display: flex
+			justify-content: space-between
+			color: #fff
+			&-left
+				display: flex
+				align-items: center
+				justify-content: space-between
+				& > *
+					&:not(:last-child)
+						margin-right: 50px
+			&-right
+				display: flex
+				align-items: center
+				& > *
+					margin-right: 25px
+					
+	.logo
+		margin-right: 20px
+	&-descr
+		margin-top: 120px
+		color: #fff
+		&__wrap
+			display: flex
+			flex-direction: column
+		&__zarab
+			margin-top: 45px
+			max-width: 670px
+			width: 100%
+			font-family: $default-font
+			font-style: normal
+			font-weight: bold
+			font-size: 48px
+			line-height: 62px
+			color: #1A1A1A
+			letter-spacing: 0.01em
+			&-text
+				background-color: #fff
+				padding: 12px 15px
+		&__owner
+			font-family: $default-font
+			font-weight: normal
+			font-size: 28px
+			line-height: 38px
+			margin: 30px 0
+		&__exp
+			font-family: $default-font
+			font-weight: normal
+			font-size: 28px
+			line-height: 38px
+			margin-bottom: 30px
+		&__details
+			margin-top: 140px
+			font-family: $default-font
+			font-style: normal
+			font-weight: normal
+			font-size: 15px
+			line-height: 20px
+			opacity: 0.8
+			
+
+
+	
+	
+.logo
+	img
+		height: 90px
+		width: 172px
+	
+.mezhd-set
+	display: block
+	font-size: 15px
+	line-height: 25px
+	text-transform: uppercase
+	font-weight: bold
+	letter-spacing: 0.2em
+	font-family: $default-font
+	span
+		display: block
+		
+.onmarket
+	font-family: $default-font
+	font-style: normal
+	font-weight: normal
+	font-size: 15px
+	line-height: 20px
+	span
+		display: block
+		
+		
+.btn
+	&-transparent
+		border: 1px solid #fff
+		padding: 12px 16px
+		font-family: $default-font
+		text-transform: uppercase
+		color: #fff
+		font-weight: bold
+		font-size: 12px
+		line-height: 16px
+		letter-spacing: 0.2em
+		white-space: nowrap
+		transition: all .3s ease
+		display: flex
+		align-items: center
+		justify-content: center
+		svg
+			fill: #fff
+			width: 14px
+			height: 14px
+			margin-right: 10px
+			display: inline-block
+		&:hover
+			color: $hoverOrange
+			background-color: #fff
+			text-decoration: none
+		&:hover svg
+			fill: $hoverOrange
+	&-orrange
+		position: relative
+		max-width: 475px
+		width: 100%
+		background: linear-gradient(119deg, rgba(255,132,0,1) 0%, rgba(255,161,0,1) 50%, rgba(255,132,0,1) 100%)
+		border-radius: 10px
+		border-bottom: 5px solid #ff6000
+		color: #000
+		padding: 42px 0 42px 55px
+		font-family: $default-font
+		font-weight: bold
+		font-size: 15px
+		line-height: 15px
+		letter-spacing: 0.2em
+		text-transform: uppercase
+		text-align: left
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		transition: all .5s ease
+		&:before
+			position: absolute
+			top: -20px
+			right: -90px
+			content: ''
+			background-image: url("../img/btn-orange-book.png")
+			width: 245px
+			height: 102px
+		&:hover
+			color: #fff
+			background: #ff6000
+			text-decoration: none
+
+
+
+
+
+.phone
+	&-number
+		font-family: $default-font
+		font-style: normal
+		font-weight: bold
+		font-size: 18px
+		line-height: 24px
+		color: #fff
+		white-space: nowrap
+		&:hover
+			color: #fff
+			text-decoration: none
+			
+	
+		
+		
+		
+		
+		
+
+.quiz
+	&-wrap
+		background-color: #6c757d
+		padding: 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+	&-steps
+		display: flex
+		justify-content: center
+		align-items: center
+		& > *
+			margin-right: 20px
+		&__item
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			display: block
+			text-align: center
+			background-color: #fff
+.question
+	&-hidden
+
+		display: none
+.steps--active
+	background-color: #fd7e14
+
+form
+	display: flex
+	flex-direction: column
+	
+.answer
+	p
+		text-transform: uppercase
+	
+.button
+	&-next
+		padding: 20px 40px
+		background-color: #fd7e14
+		width: 200px
+		margin-top: 40px
+		cursor: pointer
+.send-btn
+	display: none
+@import "media" // Always at the end
