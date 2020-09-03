@@ -19,7 +19,7 @@ body
 	color: $text
 	box-sizing: border-box
 	input, textarea
-		border: #666 1px solid
+		border: none
 		outline: none
 		&:focus:required:invalid
 			border-color: red
@@ -46,18 +46,23 @@ b, strong
 	padding: 0
 
 .h1
-	font-family: 'TTNooks-Regular', sans-serif
+	font-family: $TTNuksFont
 	font-style: normal
 	font-weight: normal
 	font-size: 96px
 	line-height: 88px
 	
+section
+	padding: 100px 0
+	background-color: #fff
+	
 .header
-	height: 115vh
+	height: 120vh
 	background-size: cover
 	padding-top: 35px
 	position: relative
 	z-index: 2
+	overflow: hidden
 	&:before
 		position: absolute
 		top: 0
@@ -157,8 +162,57 @@ b, strong
 			opacity: 0.8
 			
 
-
+.djigit-1
+	&-wrap
+		display: flex
+	&-left
+		display: flex
+		flex-direction: column
+		.h2
+			font-family: $TTNuksFont
+			font-style: normal
+			font-weight: normal
+			font-size: 140px
+			line-height: 140px
+			color: #289A00
+	&-descr
+		padding: 30px 30px 30px 50px
+		display: flex
+		align-items: center
+	&-num
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		font-size: 62px
+		line-height: 90px
+		letter-spacing: 0.01em
+		color: #000000
+		margin-right: 24px
+	&-text
+		font-family: $default-font
+		font-style: normal
+		font-weight: bold
+		font-size: 24px
+		line-height: 32px
+		color: #1A1A1A
+	&-img
+		max-width: 932px
+		width: 100%
+		position: relative
+		left: -100px
+		img
+			width: 100%
+			height: auto
+	&-right
+		max-width: 480px
+		width: 100%
+		margin-top: 80px
+		
 	
+.adv
+	&-item
+		background-color: #6c757d
+		
 	
 .logo
 	img
@@ -215,14 +269,15 @@ b, strong
 		&:hover svg
 			fill: $hoverOrange
 	&-orrange
-		position: relative
 		max-width: 475px
+		position: relative
 		width: 100%
+		padding: 42px 100px
 		background: linear-gradient(119deg, rgba(255,132,0,1) 0%, rgba(255,161,0,1) 50%, rgba(255,132,0,1) 100%)
+		filter: drop-shadow(0px 30px 50px rgba(242, 117, 0, 0.5))
 		border-radius: 10px
 		border-bottom: 5px solid #ff6000
 		color: #000
-		padding: 42px 0 42px 55px
 		font-family: $default-font
 		font-weight: bold
 		font-size: 15px
@@ -234,14 +289,16 @@ b, strong
 		justify-content: flex-start
 		align-items: center
 		transition: all .5s ease
-		&:before
-			position: absolute
-			top: -20px
-			right: -90px
-			content: ''
-			background-image: url("../img/btn-orange-book.png")
-			width: 245px
-			height: 102px
+		&--cat
+			padding: 42px 0 42px 55px
+			&:before
+				position: absolute
+				top: -20px
+				right: -90px
+				content: ''
+				background-image: url("../img/btn-orange-book.png")
+				width: 245px
+				height: 102px
 		&:hover
 			color: #fff
 			background: #ff6000
@@ -249,7 +306,51 @@ b, strong
 
 
 
+.main-form
+	font-family: $default-font
+	font-style: normal
+	font-weight: normal
+	font-size: 24px
+	line-height: 32px
+	text-align: center
+	color: #1A1A1A
+	border: none
+	input
+		width: 100%
+		//height: 90px
+		padding: 35px 0
+		text-align: center
+		border-bottom: 1px solid #1A1A1A
+		font-family: $default-font
+		font-size: 20px
+		line-height: 32px
+		color: #A3A3A3
+		&:hover
+			cursor: pointer
+	.btn-orrange
+		margin-top: 30px
+		text-align: center
+	.h3
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		font-size: 24px
+		line-height: 32px
+		text-align: center
+	.conf-polictic
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		font-size: 12px
+		line-height: 16px
+		text-align: center
+		color: #B5B5B5
+		padding: 20px 10px
+		a
+			color: #B5B5B5
+			text-decoration: underline
 
+/* #1A1A1A */
 
 .phone
 	&-number
