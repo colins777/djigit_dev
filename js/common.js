@@ -84,11 +84,40 @@ $(document).ready(function () {
        // saveValues ();
     });
 
+    let slickSliders = function () {
+        $('.earnings-item--slider').slick({
+            dots: false,
+            infinite: false,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: '<div class="nav-arrow prev-arrow"><div class="arrow-inner-prev"></div></div>',
+            nextArrow: '<div class="nav-arrow next-arrow"><div class="arrow-inner-next"></div></div>'
+        });
+        $('.schedule-slider').slick({
+            dots: true,
+            infinite: false,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+        });
+
+    }
+
 
 //remove symbols
     $("body").children().each(function() {
         document.body.innerHTML = document.body.innerHTML.replace(/\u2028/g, ' ');
     });
+
+    slickSliders();
+
 
 
 });

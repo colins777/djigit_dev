@@ -43,7 +43,7 @@ b, strong
 	max-width: 1440px
 	width: 100%
 	margin: 0 auto
-	padding: 0
+	//padding: 0 30px
 
 .h1
 	font-family: $TTNuksFont
@@ -375,9 +375,10 @@ section
 .reasons
 	position: relative
 	padding-top: 70px
+	padding-bottom: 0
 	&:after
 		position: absolute
-		top: 20%
+		top: 7%
 		left: 63%
 		content: ''
 		background-image: url("/img/reasons/title-circle.png")
@@ -386,9 +387,8 @@ section
 		height: 200px
 		z-index: 5
 	&-top
-		padding-left: 240px
+		padding-left: 218px
 	&-title
-		margin-top: 64px
 		position: relative
 		font-family: $TTNuksFont
 		font-style: normal
@@ -399,7 +399,7 @@ section
 		&__demand
 			&:before
 				top: -20px
-				left: 50%
+				left: 114%
 				position: absolute
 				content: ''
 				background-image: url("/img/reasons/demand-circle.png")
@@ -407,17 +407,31 @@ section
 				width: 100%
 				height: 158px
 			&:after
-				top: 20px
-				left: 58%
 				position: absolute
 				content: ''
+				top: 20px
+				left: 133%
 				background-image: url("/img/reasons/hinkali.png")
 				background-repeat: no-repeat
 				width: 100%
-				height: 300px
+				height: 316px
+		&--earnings
+			margin-top: 120px
+			&:before
+				position: absolute
+				content: ''
+				top: 20px
+				left: 107%
+				background-image: url("/img/reasons/title-circle.png")
+				background-repeat: no-repeat
+				width: 100%
+				height: 316px
 				
 		&__prev
-			font-family: $default-font
+			margin-bottom: 68px
+			display: block
+			position: relative
+			font-family: $TTHazelnuts-Medium
 			font-style: normal
 			font-weight: bold
 			font-size: 22px
@@ -425,9 +439,18 @@ section
 			letter-spacing: 0.2em
 			text-transform: uppercase
 			color: #1A1A1A
-			border-bottom: 2px solid #1A1A1A
+			//border-bottom: 2px solid #1A1A1A
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: -4px
+				max-width: 366px
+				width: 100%
+				height: 2px
+				background-color: #1A1A1A
 		&__descr
-			margin-top: 58px
+			margin-top: 42px
 			margin-bottom: 0
 			font-family: $default-font
 			font-style: normal
@@ -465,8 +488,6 @@ section
 				&:hover
 					.tooltip
 						opacity: 1
-				
-				
 		.squares-item
 			position: relative
 			width: 25%
@@ -532,17 +553,19 @@ section
 	.demand
 		padding-top: 120px
 		position: relative
-
-		h2
-			margin-left: 25%
-			margin-top: 0
 		&-items
 			margin: 0 auto
-			max-width: 960px
+			padding: 0 325px 0 237px
+			//max-width: 1436px
+			max-width: calc(100% - 244px * 2)
 			width: 100%
 			display: flex
+			flex-wrap: wrap
 			justify-content: space-between
 		&-item
+			max-width: 360px
+			width: 100%
+			margin-top: 87px
 			&__descr
 				&-img
 					position: relative
@@ -552,8 +575,269 @@ section
 					&:hover
 						.tooltip
 							opacity: 1
+				&-text
+					margin-bottom: 0
+					font-family: $default-font
+					font-style: normal
+					font-weight: normal
+					font-size: 20px
+					line-height: 32px
+					color: $defaultTextColor
+			&__price
+				margin-top: 32px
+				display: block
+				font-family: $default-font
+				font-style: normal
+				font-weight: bold
+				font-size: 20px
+				line-height: 32px
+				color: $hoverOrange
+			&__title
+				&-leaf
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						top: -126px
+						left: 62%
+						background-image: url("/img/reasons/leaf.png")
+						background-repeat: no-repeat
+						width: 100%
+						height: 160px
+	.earnings
+		display: flex
+		flex-direction: column
+		&-title
+			margin-top: 32px
+			font-family: $default-font
+			font-style: normal
+			font-weight: normal
+			font-size: 24px
+			line-height: 32px
+			color: $defaultTextColor
+		&-items
+			display: flex
+			flex-wrap: wrap
+			margin-top: 60px
+		&-item
+			width: 50%
+			height: 734px
+			overflow: hidden
+			padding: 185px 180px
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			&--grey
+				background-color: #F9F9F9
+			&--slider
+				position: relative
+				padding: 0
+				display: block
+				img
+					object-fit: cover
+					width: 100%
+					height: 734px
+			&__title
+				text-align: center
+				font-family: $TTNuksFont
+				font-style: normal
+				font-weight: normal
+				font-size: 48px
+				line-height: 56px
+				color: $defaultTextColor
+				&--bottom
+					max-width: 278px
+					width: 100%
+			&__spec
+				position: relative
+				margin-top: 20px
+				text-align: center
+				font-family: $default-font
+				font-style: normal
+				font-weight: normal
+				font-size: 24px
+				line-height: 32px
+				&:after
+					content: ''
+					position: absolute
+					bottom: -50px
+					left: 0
+					max-width: 710px
+					width: 100%
+					height: 1px
+					background-color: #DDDDDD
+					color: $defaultTextColor
+			&__bottom
+				text-align: center
+				margin-top: 100px
+				position: relative
+				font-family: $default-font
+				font-style: normal
+				font-weight: normal
+				font-size: 20px
+				line-height: 32px
+				color: $defaultTextColor
+			&__note
+				margin-top: 20px
+				font-family: $default-font
+				font-style: normal
+				font-weight: normal
+				font-size: 24px
+				line-height: 32px
+				text-align: center
 
+.form-rules
+	background-image: url("/img/form-rules/main-bg.png")
+	background-size: cover
+	background-repeat: no-repeat
+	width: 100%
+	min-height: 800px
+	display: flex
+	justify-content: center
+	align-items: center
+	&__inner
+		padding: 56px 225px 65px 225px
+		max-width: 1200px
+		width: 100%
+		height: 520px
+		//display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		background-color: #fff
+	&__top
+		font-family: $default-font
+		font-weight: bold
+		font-size: 24px
+		line-height: 36px
+		text-align: center
+	&__img
+		text-align: center
+		margin-top: 20px
+	&__descr
+		margin-top: 30px
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 32px
+		text-align: center
+	&__btn
+		margin-top: 30px
+			
 
+.schedule
+	padding-top: 128px
+	&-slider
+		&__item
+			width: 100%
+			display: flex!important
+			justify-content: space-between
+			flex-wrap: nowrap
+			outline: none
+		&__left
+			padding-top: 120px
+			max-width: 250px
+			width: 100%
+		&__right
+			max-width: calc(100% - 250px)
+			width: 100%
+		&__img
+			width: 100%
+			margin: 0 auto
+			img
+				width: 100%
+				object-fit: cover
+	&-title
+		font-family: $TTNuksFont
+		font-style: normal
+		font-weight: normal
+		font-size: 80px
+		line-height: 88px
+		text-align: center
+		max-width: 960px
+		width: 100%
+		margin: 0 auto
+		&__descr
+			margin-top: 22px
+			display: block
+			font-family: $default-font
+			font-style: normal
+			font-weight: bold
+			font-size: 48px
+			line-height: 56px
+			text-align: center
+			letter-spacing: 0.01em
+	&-slider
+		margin-top: 50px
+		&__title
+			font-family: $default-font
+			font-style: normal
+			font-weight: normal
+			font-size: 24px
+			line-height: 32px
+			color: $defaultTextColor
+			&-note
+				font-family: $default-font
+				font-style: normal
+				font-weight: normal
+				font-size: 24px
+				line-height: 32px
+				text-align: center
+				color: #707070
+		&__profit
+			margin-top: 40px
+			&-num
+				display: block
+				font-family: $TTNuksFont
+				font-style: normal
+				font-weight: normal
+				font-size: 48px
+				line-height: 56px
+				color: $hoverOrange
+			&-note
+				display: block
+				font-family: $default-font
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 20px
+				color: #707070
+		&__check
+			margin-top: 40px
+		&__percent
+			margin-top: 40px
+		.slick-dots
+			position: absolute
+			padding-left: 0
+			top: 0
+			left: 0
+			display: flex
+			li
+				list-style-type: none
+				button
+					width: 64px
+					height: 64px
+					border-radius: 50%
+					cursor: pointer
+					border: 1px solid $hoverOrange
+					background-color: #fff
+					margin-right: 20px
+					outline: none
+					font-family: $TTNuksFont
+					font-style: normal
+					font-weight: normal
+					font-size: 32px
+					line-height: 40px
+					text-align: center
+					color: $hoverOrange
+			li.slick-active
+				button
+					background-color: $hoverOrange
+					color: #fff
+
+				
 
 
 
@@ -646,6 +930,14 @@ section
 			text-decoration: none
 		&:hover svg
 			fill: $hoverOrange
+		&--white
+			border: 2px solid $hoverOrange
+			border-radius: 8px
+			color: $hoverOrange
+			padding: 38px 0
+			&:hover
+				background-color: $hoverOrange
+				color: #fff
 	&-orrange
 		max-width: 475px
 		position: relative
@@ -743,7 +1035,45 @@ section
 			text-decoration: none
 			
 	
-		
+//Arrow Slider
+.nav-arrow
+	cursor: pointer
+	position: absolute
+	display: flex
+	content: ''
+	width: 60px
+	height: 60px
+	z-index: 9
+	background-color: #fff
+	border-radius: 50%
+	top: 50%
+	transform: translateY(-50%)
+.prev-arrow
+	cursor: pointer
+	left: 30px
+	background-image: url("img/icons/next-arrow.png")
+	.arrow-inner-prev
+		position: absolute
+		top: 35%
+		left: 41%
+		transform: translate(-50%, -50%)
+		transform: rotate(-228deg)
+		width: 20px
+		height: 20px
+		border: solid $hoverOrange
+		border-width: 0 3px 3px 0
+.next-arrow
+	right: 30px
+	.arrow-inner-next
+		position: absolute
+		top: 35%
+		left: 29%
+		transform: translate(-50%, -50%)
+		transform: rotate(-48deg)
+		width: 20px
+		height: 20px
+		border: solid $hoverOrange
+		border-width: 0 3px 3px 0
 		
 		
 		
