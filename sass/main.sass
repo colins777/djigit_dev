@@ -79,6 +79,7 @@ section
 			position: absolute
 			top: 85%
 			left: 71%
+			max-width: 440px
 			width: 100%
 			height: 100%
 			content: ''
@@ -89,6 +90,7 @@ section
 			position: absolute
 			top: 80%
 			left: 88%
+			max-width: 160px
 			width: 100%
 			height: 100%
 			content: ''
@@ -161,7 +163,7 @@ section
 			line-height: 20px
 			opacity: 0.8
 			
-
+			
 .djigit-1
 	&-wrap
 		display: flex
@@ -208,7 +210,7 @@ section
 		width: 100%
 		margin-top: 80px
 		
-	
+		
 .adv
 	&-item
 		display: flex
@@ -271,8 +273,6 @@ section
 						font-family: $default-font
 						font-size: 15px
 						line-height: 20px
-
-			
 			&-right
 				max-width: 960px
 				width: 100%
@@ -280,9 +280,6 @@ section
 					width: 100%
 					height: 100%
 					object-fit: cover
-			
-				
-				
 	&-left
 		max-width: 960px
 		width: 100%
@@ -383,6 +380,7 @@ section
 		content: ''
 		background-image: url("/img/reasons/title-circle.png")
 		background-repeat: no-repeat
+		max-width: 160px
 		width: 100%
 		height: 200px
 		z-index: 5
@@ -404,6 +402,7 @@ section
 				content: ''
 				background-image: url("/img/reasons/demand-circle.png")
 				background-repeat: no-repeat
+				max-width: 160px
 				width: 100%
 				height: 158px
 			&:after
@@ -424,6 +423,7 @@ section
 				left: 107%
 				background-image: url("/img/reasons/title-circle.png")
 				background-repeat: no-repeat
+				max-width: 160px
 				width: 100%
 				height: 316px
 				
@@ -602,6 +602,7 @@ section
 						left: 62%
 						background-image: url("/img/reasons/leaf.png")
 						background-repeat: no-repeat
+						max-width: 180px
 						width: 100%
 						height: 160px
 	.earnings
@@ -687,6 +688,7 @@ section
 				line-height: 32px
 				text-align: center
 
+				
 .form-rules
 	background-image: url("/img/form-rules/main-bg.png")
 	background-size: cover
@@ -727,8 +729,31 @@ section
 		margin-top: 30px
 			
 
-.schedule
+.graph
 	padding-top: 128px
+	padding-bottom: 60px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 110px
+		background-image: url("/img/graph/circle-top.svg")
+		background-repeat: no-repeat
+		width: 100%
+		max-width: 356px
+		height: 365px
+		opacity: 0.1
+	&:after
+		content: ''
+		position: absolute
+		bottom: -150px
+		right: 110px
+		background-image: url("/img/graph/graph-leaf.png")
+		background-repeat: no-repeat
+		width: 100%
+		max-width: 112px
+		height: 365px
 	&-slider
 		&__item
 			width: 100%
@@ -738,10 +763,10 @@ section
 			outline: none
 		&__left
 			padding-top: 120px
-			max-width: 250px
+			max-width: 428px
 			width: 100%
 		&__right
-			max-width: calc(100% - 250px)
+			max-width: calc(100% - 428px)
 			width: 100%
 		&__img
 			width: 100%
@@ -838,43 +863,374 @@ section
 					color: #fff
 
 				
+.indicators
+	padding-top: 0
+	display: flex
+	justify-content: space-between
+	&-center
+		max-width: 640px
+		width: 100%
+		padding: 0 80px
+		margin-top: 220px
+		&__title
+			font-family: $TTNuksFont
+			font-style: normal
+			font-weight: normal
+			font-size: 80px
+			line-height: 88px
+			text-align: center
+		&__descr
+			font-family: $default-font
+			font-style: normal
+			font-weight: normal
+			font-size: 24px
+			line-height: 32px
+			text-align: center
+		&__note
+			margin-top: 30px
+			font-family: $default-font
+			font-style: normal
+			font-weight: normal
+			font-size: 24px
+			line-height: 32px
+			text-align: center
+	&-columns
+		width: calc((100% - 640px / 2))
+		img
+			width: 100%
+
+			
+.getDetailPresent
+	display: flex
+	align-items: center
+	justify-content: center
+	background-image: url("/img/getDetailPresent/getDetailPresent_bg.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	padding: 232px 0 172px 0
+	&-center
+		position: relative
+		max-width: 1200px
+		width: 100%
+		padding: 60px 130px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		background-color: #fff
+		&:before
+			content: ''
+			top: -60px
+			left: -68px
+			position: absolute
+			max-width: 700px
+			width: 100%
+			max-height: 350px
+			height: 100%
+			background-image: url("/img/getDetailPresent/catalog-shadow.png")
+			background-repeat: no-repeat
+			background-size: cover
+
+	&-right
+		max-width: 480px
+		width: 100%
+		.main-form
+			input[type='text']
+				padding-top: 0
+			.conf-polictic
+				padding-bottom: 0
+			
+	&-left
+		max-width: 320px
+		&__title
+			margin-top: 162px
+			font-family: $TTHazelnuts-Medium
+			font-style: normal
+			font-weight: 500
+			font-size: 48px
+			line-height: 56px
+			text-align: center
+		&__note
+			margin-top: 40px
+			font-family: $default-font
+			font-style: normal
+			font-weight: normal
+			font-size: 24px
+			line-height: 32px
+			text-align: center
+			color: #1A1A1A
+			
+			
+.concept
+	position: relative
+	padding-top: 150px
+	padding-bottom: 0
+	&:before
+		position: absolute
+		top: 35px
+		left: 10%
+		max-width: 165px
+		width: 100%
+		height: 200px
+		content: ''
+		background-image: url("/img/concept/concept-leaf-left.png")
+		background-repeat: no-repeat
+		background-size: contain
+	&-header
+		max-width: 960px
+		width: 100%
+		text-align: center
+		margin: 0 auto
+		&__title
+			max-width: 600px
+			margin: 0 auto
+			font-family: $default-font
+			font-style: normal
+			font-weight: bold
+			font-size: 48px
+			line-height: 56px
+			text-align: center
+			letter-spacing: 0.01em
+			color: #1A1A1A
+		&__descr
+			margin-top: 32px
+			font-family: $default-font
+			font-style: normal
+			font-weight: normal
+			font-size: 24px
+			line-height: 32px
+	&-items
+		margin-top: 150px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		color: $defaultTextColor
+	&-item
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 50%
+		height: 1080px
+		overflow: hidden
+		&--grey
+			background-color: #FBFBFB
+			padding: 0 240px
+			justify-content: center
+		&--green
+			background-color: #289A00
+			padding: 242px 220px 0 220px
+		&__img
+			height: 1080px
+			width: 50%
+			padding: 0
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&__title
+			font-family: $TTNuksFont
+			font-style: normal
+			font-weight: normal
+			font-size: 48px
+			line-height: 56px
+			text-align: center
+			transform-style: preserve-3d
+			&--black
+				position: relative
+				&:before
+					position: absolute
+					top: -95px
+					left: 85%
+					max-width: 165px
+					width: 100%
+					height: 200px
+					content: ''
+					background-image: url("/img/universal-images/title-circle.png")
+					background-repeat: no-repeat
+					background-size: contain
+					transform: translateZ(-1px)
+			&--white
+				color: #fff
+				position: relative
+				&:before
+					position: absolute
+					top: -83px
+					left: 77%
+					max-width: 165px
+					width: 100%
+					height: 200px
+					content: ''
+					background-image: url("/img/concept/concept-circle-yellow.png")
+					background-repeat: no-repeat
+					background-size: contain
+					transform: translateZ(-1px)
+		&__descr
+			margin-top: 32px
+			font-family: $default-font
+			font-size: 20px
+			line-height: 32px
+			text-align: center
+		&__icons
+			margin-top: 20px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			padding: 0 50px
+		&__icon
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			&-img
+				margin-top: 10px
+			&-descr
+				text-align: center
+				font-family: $default-font
+				font-style: normal
+				font-weight: normal
+				font-size: 20px
+				line-height: 32px
+				color: #fff
+		&__note
+			margin-top: 12px
+			font-family: $default-font
+			font-size: 16px
+			line-height: 24px
+			text-align: center
+			color: #fff
+	&__tooltip-wrap
+		cursor: pointer
+		position: relative
+		&:hover
+			.tooltip
+				opacity: 1
+
+
+.recomend
+	padding: 140px 0
+	
+	&-items
+		display: flex
+		justify-content: space-between
+		position: relative
+		&:before
+			position: absolute
+			top: -140px
+			left: calc(50% - 1px)
+			content: ''
+			width: 1px
+			height: 200px
+			background-color: #DDDDDD
+		&:after
+			position: absolute
+			bottom: -140px
+			left: calc(50% - 1px)
+			content: ''
+			width: 1px
+			height: 200px
+			background-color: #DDDDDD
+	&-item
+		width: 33.3%
+		padding: 0 60px
+		&--text
+			position: relative
+			margin-top: 7%
+		&__img
+			max-width: 345px
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+		&__text
+			text-align: center
+			margin: 0 auto
+			max-width: 224px
+			font-family: $TTHazelnuts-Medium
+			font-style: normal
+			font-weight: 500
+			font-size: 24px
+			line-height: 36px
+
+
+.monitor-trends
+	padding-top: 0
+	display: flex
+	justify-content: space-between
+	&__item
+		width: 50%
+		&--right
+			padding: 250px 135px 105px 230px
+			display: flex
+			justify-content: flex-end
+			//border-bottom: 1px solid #000
+		
+		&-img
+			width: 100%
+			background-color: #F9F9F9
+			padding-left: 110px
+		&-title
+			margin: 0 auto
+			font-family: $TTNuksFont
+			font-style: normal
+			font-weight: normal
+			font-size: 48px
+			line-height: 56px
+			text-align: center
+			position: relative
+			&:before
+				position: absolute
+				top: -190px
+				left: -50px
+				content: ''
+				background-image: url("/img/monitor-trends/monitor-trends-circle.png")
+				width: 165px
+				height: 165px
+				background-repeat: no-repeat
+			
+		&-wrap
+			max-width: 404px
+			width: 100%
+			display: flex
+			flex-direction: column
+			
+		&-descr
+			margin-top: 32px
+			font-family: $default-font
+			font-style: normal
+			font-weight: normal
+			font-size: 20px
+			line-height: 32px
+			text-align: center
+			color: $defaultTextColor
+
 
 
 
 .tooltip
 	position: absolute
-	left: calc(100% + 1.5em)
-	top: 50%
-	transform: translateY(-50%)
+	left: calc(100% + 10px)
+	top: 190%
 	display: flex
 	align-items: center
 	justify-content: center
-	width: 100%
-	background-color: #fff
-	color: #000
+	padding: 14px 20px
+	color: #fff
+	font-size: 16px
+	line-height: 20px
+	text-align: center
+	background-color: $hoverOrange
 	transition: all .3s ease
-	box-shadow: 0 5px 25px 5px grey
-	box-sizing: border-box
-	//border: 1px solid $accent
-	border-radius: 3px
-	font-size: 12px
-	line-height: 1.2
-	letter-spacing: 1px
-	max-width: 200px
-	min-width: 145px
-	padding: 1em
 	opacity: 0
-
-	&:after
-		background: #fff
-		content: ""
-		height: 10px
+	&:before
+		content: ''
 		position: absolute
-		transform: rotate(45deg)
-		width: 10px
-		left: -5px;
-		margin-top: -5px
-		top: 50%
+		top: -17px
+		left: -11px
+		background-image: url("/img/universal-images/tooltip-top.png")
+		background-repeat: no-repeat
+		width: 100%
+		height: 100%
+		
 
 .logo
 	img
@@ -976,6 +1332,7 @@ section
 
 
 
+			
 .main-form
 	font-family: $default-font
 	font-style: normal
@@ -987,7 +1344,7 @@ section
 	border: none
 	input
 		width: 100%
-		padding: 35px 0
+		padding: 44px 0 26px 0
 		text-align: center
 		border-bottom: 1px solid #1A1A1A
 		font-family: $default-font
@@ -1018,8 +1375,6 @@ section
 		a
 			color: #B5B5B5
 			text-decoration: underline
-
-/* #1A1A1A */
 
 .phone
 	&-number
