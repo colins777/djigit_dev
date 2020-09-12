@@ -8,13 +8,15 @@
 ::selection
 	background-color: $accent
 	color: #fff
-
+html
+	overflow-x: hidden
 body
 	font-size: 16px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
+	color: $defaultTextColor
 	overflow-x: hidden
 	color: $text
 	box-sizing: border-box
@@ -1208,6 +1210,7 @@ section
 			text-align: center
 			color: $defaultTextColor
 
+			
 .form-invest
 	position: relative
 	padding-top: 70px
@@ -1274,8 +1277,10 @@ section
 	&__btn
 		margin-top: 56px
 
+		
 .pizzeria
 	padding-top: 50px
+	padding-bottom: 0
 	&-top
 		padding: 0 124px
 		&__prev
@@ -1310,6 +1315,7 @@ section
 	&-content
 		display: flex
 		justify-content: space-between
+		margin-top: 65px
 	&-item
 		display: flex
 		flex-direction: column
@@ -1349,7 +1355,230 @@ section
 			color: #707070
 
 			
+.quote
+	padding-top: 85px
+	position: relative
+	&:before
+		position: absolute
+		top: 50%
+		right: 300px
+		content: ''
+		width: 200px
+		height: 250px
+		background-image: url("/img/quote/greenery.png")
+		background-repeat: no-repeat
+	&-wrap
+		position: relative
+		padding: 0 124px
+		&:before
+			position: absolute
+			top: calc(50% - 80px)
+			left: 0
+			content: ''
+			width: 65px
+			height: 160px
+			background-image: url("/img/quote/quote-left.png")
+			background-repeat: no-repeat
+		&:after
+			position: absolute
+			top: calc(50% - 80px)
+			right: 120px
+			content: ''
+			width: 65px
+			height: 160px
+			background-image: url("/img/quote/quote-right.png")
+			background-repeat: no-repeat
+	&-text
+		font-family: $default-font
+		font-size: 20px
+		line-height: 32px
+		color: #1A1A1A
+	&-content
+		margin-top: 30px
+		display: flex
+		justify-content: flex-start
+	&-img
+		margin-right: 25px
+	&-name
+		font-family: $default-font
+		font-weight: bold
+		font-size: 20px
+		line-height: 32px
+	&-note
+		margin-top: 4px
+		font-family: $default-font
+		font-size: 16px
+		line-height: 24px
+		color: #707070
+	&-btn
+		margin-top: 30px
+		max-width: 736px
+		width: 100%
 
+
+.guests
+	&-top
+		padding: 0 124px
+	&-title
+		position: relative
+		max-width: 470px
+		width: 100%
+		font-family: $TTNuksFont
+		font-style: normal
+		font-weight: normal
+		font-size: 80px
+		line-height: 88px
+		color: $defaultTextColor
+		&:before
+			content: ''
+			position: absolute
+			top: calc(50% - 80px)
+			left: calc(100% + 260px)
+			background-image: url("/img/guests/circle-green.png")
+			background-repeat: no-repeat
+			width: 160px
+			height: 160px
+	&-note
+		margin-top: 45px
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		font-size: 24px
+		line-height: 32px
+	&-steps
+		position: relative
+		margin-top: 90px
+		display: flex
+		flex-direction: column
+		&:before
+			content: ''
+			position: absolute
+			top: 30%
+			left: -18%
+			background-image: url("/img/guests/guests-leaf.png")
+			background-repeat: no-repeat
+			width: 100px
+			height: 90px
+		&__title
+			padding: 10px 0
+			font-family: $TTHazelnuts-Medium
+			font-style: normal
+			font-weight: bold
+			font-size: 15px
+			line-height: 20px
+			letter-spacing: 0.2em
+			text-transform: uppercase
+			color: $defaultTextColor
+		&__line
+			margin-bottom: 2px
+			display: flex
+			align-items: center
+			height: 96px
+			background-color: #FBFBFB
+			//justify-content: space-between
+		&__left
+			max-width: 510px
+			width: 100%
+		&__right
+			max-width: calc(100% - 510px)
+			width: 100%
+		&__name
+			display: flex
+			align-items: center
+		&__num
+			padding: 0 25px
+			font-family: $TTNuksFont
+			font-size: 20px
+			line-height: 24px
+			color: #289A00
+			white-space: nowrap
+		&__descr
+			margin-bottom: 0
+			font-style: normal
+			font-weight: normal
+			font-family: $default-font
+			font-size: 18px
+			line-height: 24px
+		&__progress
+			content: ''
+			height: 30px
+			width: 100%
+			&--1
+				max-width: 92px
+				background: linear-gradient(270deg, #FFC700 -88.75%, #FF7A00 100%)
+			&--2
+				margin-left: 14%
+				max-width: 125px
+				background: linear-gradient(270deg, #FFC700 21.13%, #FF7A00 159.88%)
+			&--3
+				margin-left: 27%
+				max-width: 296px
+				background: linear-gradient(270deg, #289A00 -13.46%, #73D84D 44.86%, #FFC700 102.45%)
+			&--4
+				margin-left: 27%
+				max-width: 143px
+				background: linear-gradient(270deg, #73D84D 0.28%, #FFC700 104.23%)
+			&--5
+				margin-left: 27%
+				max-width: 435px
+				background: linear-gradient(270deg, #289A00 16.51%, #73D84D 62.78%, #FFC700 102.45%)
+			&--6
+				margin-left: 31%
+				max-width: 329px
+				background: linear-gradient(270deg, #289A00 5.16%, #73D84D 57.73%, #FFC700 110.33%)
+			&--7
+				margin-left: 90%
+				max-width: 92px
+				background: linear-gradient(270deg, #289A00 -2.96%, #73D84D 162.73%)
+			
+			
+.stages
+	padding-top: 0
+	&-top
+		padding: 0 124px
+		max-width: 940px
+		width: 100%
+	&-title
+		position: relative
+		font-family: $TTNuksFont
+		font-weight: normal
+		font-size: 80px
+		line-height: 88px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: calc(100% + 40px)
+			background-image: url("/img/stages/stages-cirlce.png")
+			background-repeat: no-repeat
+			width: 160px
+			height: 160px
+			
+	&-content
+		margin-top: 85px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&-item
+		margin-bottom: 65px
+		max-width: 25%
+		width: 100%
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+		padding: 0 80px
+		&:not(:last-child)
+			border-right: 1px solid #DDDDDD
+		&__descr
+			margin-top: 25px
+			font-family: $default-font
+			font-style: normal
+			font-weight: normal
+			font-size: 20px
+			line-height: 32px
+			text-align: center
+			color: $defaultTextColor
 
 
 .tooltip
@@ -1407,7 +1636,45 @@ section
 		&:hover
 			.tooltip-iterior-show
 				opacity: 1
-	
+				z-index: 1
+	&-guests
+		position: relative
+		display: inline-block
+		cursor: pointer
+		width: 24px
+		&-show
+			opacity: 0
+			position: absolute
+			left: calc(100% + 30px)
+			top: calc(50% - 38px)
+			display: block
+			min-width: 245px
+			padding: 8px
+			background-color: #289A00
+			color: #fff
+			font-size: 16px
+			line-height: 20px
+			transition: all .3s ease
+			text-align: center
+			&:before
+				content: ''
+				position: absolute
+				top: calc(50% - 8px)
+				left: -17px
+				background-image: url("/img/guests/guests-tooltip-arrow.png")
+				background-repeat: no-repeat
+				width: 17px
+				height: 16px
+		&-text
+			font-family: $default-font
+			font-weight: normal
+			font-size: 16px
+			line-height: 20px
+			color: #fff
+		&:hover
+			.tooltip-guests-show
+				opacity: 1
+			
 		
 
 .logo
