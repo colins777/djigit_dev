@@ -5166,7 +5166,7 @@ section {
 }
 
 .stages {
-  padding-top: 0;
+  padding: 0;
 }
 
 .stages-top {
@@ -5247,6 +5247,120 @@ section {
   line-height: 32px;
   text-align: center;
   color: #1A1A1A;
+}
+
+.instructions {
+  padding-top: 50px;
+}
+
+.instructions-title {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+  text-align: center;
+  font-family: "TTHazelnuts-Regular", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0.01em;
+}
+
+.instructions-content {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.instructions-content__item {
+  max-width: 33%;
+  width: 100%;
+  padding: 0 45px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.instructions-content__title {
+  margin-top: 0;
+  text-align: center;
+  font-family: "TTHazelnuts-Regular", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.instructions-content__note {
+  text-align: center;
+  font-family: "TTHazelnuts-Regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.instructions-img {
+  height: 160px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.instructions-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.instructions-bottom {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.instructions-bottom__note {
+  font-family: "TTHazelnuts-Regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.instructions-bottom__btn {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tooltip {
