@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 1600px)
 	.container
-		max-width: 1024px
+		max-width: 1200px
 		padding: 0 50px
 	.reasons
 		.demand
@@ -17,3 +17,230 @@
 			&__demand
 				&:after
 					left: 0
+	.concept
+		&-item
+			&--green
+				padding: 100px
+					
+@media screen and (max-width: 1366px)
+	.adv
+		&-yellow
+			.yellow-left
+				padding: 100px 50px
+				&__bottom
+					margin-top: 20%
+					width: 100%
+					text-align: center
+					p
+						width: 100%
+						white-space: normal
+						margin-bottom: 10px
+	.reasons
+		&-connect
+			left: 86%
+		&-title
+			&--cost
+				&:after
+					left: 54%
+	.success
+		&:before
+			left: -182px
+		&:after
+			left: -95px
+		&-right__images
+			&:after
+				width: 500px
+			&:before
+				top: 300px
+	
+	
+	.quiz
+		&-num
+			&--line
+				&:before
+					content: none
+
+					
+@media screen and (max-width: 1024px)
+	section
+		padding: 50px 0
+	.header
+		&:before
+			content: none
+		&-top
+			&__center
+				&-right
+					flex-direction: column
+					& > *
+						&:not(:last-child)
+							margin-bottom: 5px
+					.btn-transparent
+						margin-right: 0
+					.phone-number
+						margin-right: 0
+				&-left
+					.mezhd-set
+						font-size: 12px
+						line-height: 18px
+	.adv
+		&-item
+			flex-direction: column
+		&-left
+			max-width: 100%
+		&-right
+			&__item
+				max-width: 50%
+				padding: 30px
+		&-yellow
+			flex-direction: column
+			.yellow-left
+				max-width: 100%
+			.yellow-right
+				max-width: 100%
+	.reasons
+		&:after
+			top: 0
+			left: 72%
+		&-squares
+			flex-wrap: wrap
+			.squares-item
+				width: 50%
+			&__bottom
+				margin: 0 auto
+		.demand-items
+			padding: 0 50px
+			max-width: 100%
+			
+@media screen and (max-width: 768px)
+	.header-top
+		&__center
+			flex-direction: column
+
+@media screen and (max-width: 480px)
+	.container
+		padding: 0 10px
+	.h1
+		font-size: 35px
+		text-align: center
+	.header
+		height: auto
+		padding-top: 15px
+		&-top
+			flex-direction: column
+			&__center
+				flex-direction: column
+				&-left
+					flex-direction: column
+					align-items: center
+					.mezhd-set
+						margin: 15px auto
+						display: block
+						text-align: center
+					.onmarket
+						display: none
+				&-right
+					display: flex
+					flex-direction: row
+					flex-wrap: wrap
+					justify-content: center
+					.btn-transparent
+						width: 45%
+						&:not(:last-child)
+							margin-right: 10px
+					.phone-number
+						margin: 10px auto
+		&-descr
+			margin-top: 30px
+			&-wrap
+				flex-direction: column
+				align-items: center
+			&__zarab
+				margin: 0 auto
+				width: 90%
+				display: flex
+				justify-content: center
+				flex-wrap: wrap
+				&-text
+					//display: inline-block
+					color: #fff
+					text-align: center
+					font-size: 25px
+					line-height: 30px
+					white-space: nowrap
+					background-color: transparent
+					&--bottom
+						text-align: left
+			&__owner
+				font-size: 20px
+				line-height: 25px
+			&__exp
+				font-size: 20px
+				line-height: 25px
+			&__details
+				margin-top: 100px
+				padding-bottom: 20px
+		&-img-circle
+			display: none
+		.btn-orrange--cat
+			padding: 42px 0 42px 18px
+			font-size: 14px
+			&:before
+				right: -132px
+	.djigit
+		padding-top: 30px
+		&-wrap
+			flex-direction: column
+		.h2
+			font-size: 60px
+			line-height: 70px
+			text-align: center
+		&-descr
+			padding: 10px
+		&-img
+			left: 0
+	.adv
+		&-right
+			flex-direction: column
+			&__item
+				max-width: 100%
+	.reasons
+		padding-top: 0
+		&-top
+			padding-left: 0
+		&-title
+			font-size: 55px
+			line-height: 55px
+			&--cost:after
+				display: none
+			&__prev
+				white-space: nowrap
+				font-size: 20px
+				text-align: center
+			&__demand
+				font-size: 40px
+				line-height: 40px
+				&:after
+					content: none
+				
+		&-connect
+			display: none
+		&-squares
+			flex-direction: column
+			.squares-item
+				width: 100%
+				height: auto
+			&__bottom
+				padding: 10px
+		.demand
+			&-items
+				padding: 0 10px
+				flex-direction: column
+			&-item
+				max-width: 100%
+				text-align: center
+				&__title
+					font-size: 20px
+				&__descr
+					&-text
+						font-size: 18px
+				

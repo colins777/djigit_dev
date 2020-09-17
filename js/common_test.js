@@ -1,12 +1,88 @@
 $(document).ready(function () {
 
-    let anchorNav = function () {
-        $('body').on('click', '[href*="#anchor"]', function(e){
-            let fixed_offset = 100;
-            $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
-            e.preventDefault();
-        });
+    let questions = [
+        {question : '1 Где вЫ планируете открывать ресторан грузинской кухни?',
+            input: '<input type="text" name="city" placeholder="Напишите страну и город, например: Украина, Киев">',
+            answer : ''
+        },
+
+        {question : '2 Есть ли у вас опыт в бизнесе?',
+            input: '<input type="text" name="city" placeholder="Напишите страну и город, например: Украина, Киев"><div class="buisiness-wrap">' +
+                '<p>Да</p><input type="radio" name="buisiness" value="Да">' +
+                '<p>Нет</p><input type="radio" name="buisiness" value="Нет"></div>',
+            answer : ''
+
+        },
+
+        {question : '3 Какой формат ресторана вам интересен?',
+            input: '                    <div>\n' +
+                '                        <p>от 100 м2 с летней площадкой на теплый период</p>\n' +
+                '                        <input type="radio" name="typesBuisiness" value="от 100 м2 с летней площадкой на теплый период">\n' +
+                '                        <p>от 300 м2 с кальянным залом, караоке ﻿и летней площадкой на теплый период</p>\n' +
+                '                        <input type="radio" name="typesBuisiness" value="от 300 м2 с кальянным залом">\n' +
+                '                        <p>Точка — ﻿еда навынос</p>\n' +
+                '                        <input type="radio" name="typesBuisiness" value="Точка — ﻿еда навынос">\n' +
+                '                    </div>',
+            answer : ''
+
+        },
+
+        {question : '4 Где вЫ планируете открывать ресторан грузинской кухни?',
+            input: '<input type="text" name="city" placeholder="Напишите страну и город, например: Украина, Киев">',
+            answer : ''
+        },
+
+
+    ];
+
+    let quizAsk = $('.question');
+    let answerWrap = $('.answer');
+
+    let currentQuest = 0;
+    let totalQuest = questions.length;
+    let questIndex = 0;
+    let userAnswers = [];
+
+    //console.log(totalQuest);
+
+    function loadQuestion (questIndex) {
+        let q = questions[questIndex];
+        let qQuest = questions[questIndex].question;
+        let input = questions[questIndex].input;
+        quizAsk.html(qQuest);
+        answerWrap.html(input);
     }
+
+    loadQuestion (questIndex);
+
+    function changeSteps () {
+       let steps = $('.quiz-steps__item');
+
+           if (steps[questIndex].classList.contains('steps--active')) {
+               return false;
+           }
+            else {
+               $(steps[questIndex]).addClass('steps--active');
+       }
+    }
+
+    function loadNextQuestion () {
+        questIndex++;
+        loadQuestion(questIndex);
+    }
+
+    function saveValues () {
+        let form = $('form');
+        form.action = 'https://google.com/search';
+        form.method = 'GET';
+        form.submit();
+    }
+
+    $('.button-next').click(function () {
+        loadNextQuestion (questIndex);
+        changeSteps ();
+       // saveValues ();
+    });
 
     let slickSliders = function () {
         $('.earnings-item--slider').slick({
@@ -118,64 +194,46 @@ $(document).ready(function () {
 
         let backBtn = $('.quiz-form__btn--back'),
             nextBtn = $('.quiz-form__btn--forward'),
-            sections = $('.quiz-section'),
-            currentSection = 0;
+            firstQuestion = $('#quiz-question-1'),
+            secondQuestion = $('#quiz-question-2'),
+            thirdQuestion = $('#quiz-question-3'),
+            fourthQuestion = $('#quiz-question-4'),
+            index = 1;
 
+        // if ((firstQuestion).hasClass('quiz-active')) {
+        //     backBtn.addClass('not-active');
+        //     $('.quiz-form__btn-wrap').css({'justify-content' : 'flex-end'})
+        // }
 
-        //hide all section except first
-        for (let i = 1; i < sections.length; i++) {
-            sections[i].classList.add('not-active');
+        function loadQuestion (index) {
+
+            if ($('#quiz-question-' + index ).hasClass('quiz-active')) {
+                $('#quiz-question-' + index ).removeClass('quiz-active');
+            } else {
+                $('#quiz-question-' + index ).addClass('quiz-active');
+            }
+
         }
 
-        function hideElements () {
-            if (currentSection === sections.length) {
-                $('.quiz-bottom').classList.add('not-active');
-            }
-        }
-
-        function loadQuestion (toHide, toShow) {
-            sections[toShow].classList.remove('not-active');
-            sections[toHide].classList.add('not-active');
-
-            currentSection = toShow;
-        };
-
-        function showNextQuestion () {
-            if (currentSection === sections.length - 1) {
-               return;
-
-            } else {
-                loadQuestion (currentSection, currentSection + 1);
-            }
-        };
-
-        function showPrevQuestion () {
-            if (currentSection === 0) {
-                return;
-
-            } else {
-                loadQuestion (currentSection, currentSection - 1);
-            }
-        };
+            nextBtn.click(function (e) {
+                e.preventDefault();
+               index++;
+                loadQuestion (index);
+            });
 
 
+        // nextBtn.click(function (e) {
+        //     e.preventDefault();
+        //     $('.quiz-question-1').removeClass('quiz-active');
+        //     $('.quiz-question-2').addClass('quiz-active');
+        // });
+        //
+        // if ((firstQuestion).hasClass('quiz-active')) {
+        //     backBtn.addClass('not-active');
+        //     $('.quiz-form__btn-wrap').css({'justify-content' : 'flex-end'})
+        // }
 
-
-        nextBtn.click(function (e) {
-            e.preventDefault();
-
-            showNextQuestion();
-            if (currentSection === sections.length) {
-                $('.quiz-bottom').classList.add('not-active');
-            }
-        });
-
-        backBtn.click(function (e) {
-            e.preventDefault();
-            showPrevQuestion();
-        })
-
-    };
+    }
 
 
     function initMap() {
@@ -309,8 +367,6 @@ $(document).ready(function () {
         };
     }
 
-
-    anchorNav()
     slickSliders();
     changeNumslidesReviews();
     dropdownQusestions();
@@ -322,6 +378,71 @@ $(document).ready(function () {
 
 });
 
-/*Multistep Form*/
-/*https://www.youtube.com/watch?v=saabXtJpEvY
-    https://www.youtube.com/watch?v=8onWWl-k7Gw*/
+
+let dropdownQusestions = function () {
+    $('.questions-right').click(function () {
+
+        if ((!$(this).find('.questions-right__triangle').hasClass('questions-right__triangle--rotate') ||
+            (!$(this).siblings('.questions-left').hasClass('questions-left--bold'))
+        )){
+            $(this).find('.questions-right__triangle').addClass('questions-right__triangle--rotate');
+            $(this).siblings('.questions-left').addClass('questions-left--bold');
+        } else {
+            $(this).find('.questions-right__triangle').removeClass('questions-right__triangle--rotate');
+            $(this).siblings('.questions-left').removeClass('questions-left--bold');
+        }
+
+        $(this).siblings('.questions-answer').toggle();
+
+    });
+};
+
+let quiz = function () {
+
+    let backBtn = $('.quiz-form__btn--back'),
+        nextBtn = $('.quiz-form__btn--forward'),
+        sections = $('.quiz-section'),
+        currentSection = 0;
+
+
+    //hide all section except first
+    for (let i = 1; i < sections.length; i++) {
+        sections[i].classList.add('not-active');
+    }
+
+    function loadQuestion (toHide, toShow) {
+        sections[toShow].classList.remove('not-active');
+        sections[toHide].classList.add('not-active');
+
+        currentSection = toShow;
+    };
+
+    function showNextQuestion () {
+        if (currentSection === sections.length - 1) {
+            return;
+            loadQuestion (currentSection, currentSection + 1);
+        }
+    };
+
+    function showPrevQuestion () {
+        if (currentSection === 0) {
+            return;
+            loadQuestion (currentSection, currentSection - 1);
+        }
+    };
+
+
+
+
+    nextBtn.click(function (e) {
+        e.preventDefault();
+        showNextQuestion();
+
+    });
+
+    backBtn.click(function (e) {
+        e.preventDefault();
+        showPrevQuestion();
+    })
+
+};
