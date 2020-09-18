@@ -510,7 +510,6 @@ section
 			align-items: center
 			justify-content: flex-start
 			transition: all .3s ease
-			cursor: pointer
 			&:not(:last-child)
 				&:before
 					content: ''
@@ -2255,7 +2254,7 @@ section
 	position: relative
 	&-form
 		align-items: center
-		.conf-polictic
+		.conf-politic
 			max-width: 475px
 			text-align: center
 			margin-top: 20px
@@ -2348,6 +2347,26 @@ section
 		font-size: 48px
 		line-height: 56px
 		text-align: center
+		&__final
+			display: flex
+			justify-content: center
+			flex-direction: column
+			align-items: center
+			&-thanks
+				font-family: $TTNuksFont
+				font-style: normal
+				font-weight: normal
+				font-size: 80px
+				line-height: 88px
+				text-align: center
+			&-text
+				max-width: 655px
+				width: 100%
+				font-style: normal
+				font-weight: bold
+				font-size: 32px
+				line-height: 40px
+				text-align: center
 		&:before
 			content: ''
 			position: absolute
@@ -2454,7 +2473,6 @@ section
 			font-size: 20px
 			line-height: 32px
 .quiz
-	&-question-1
 	&-question-2
 		width: 100%
 		display: flex
@@ -2591,10 +2609,6 @@ section
 				line-height: 24px
 				color: #707070
 				text-align: left
-	&-btn-orrange
-		display: none!important
-	&-conf-polictic
-		display: none
 	&-active
 		display: block
 	.not-active
@@ -2988,6 +3002,10 @@ input[type="submit"]
 	border-radius: 50%
 	top: 50%
 	transform: translateY(-50%)
+	&--ostrov
+		width: 40px
+		height: 40px
+		background-color: red
 .prev-arrow
 	cursor: pointer
 	left: 30px
@@ -3014,6 +3032,7 @@ input[type="submit"]
 		height: 20px
 		border: solid $hoverOrange
 		border-width: 0 2px 2px 0
+
 		
 //Reviews-slider
 .reviews-arrow
@@ -3049,4 +3068,283 @@ form
 		cursor: pointer
 .send-btn
 	display: none
+	
+	
+//Popups
+
+.foodcort
+	margin: 0 auto
+	max-width: 800px
+	width: 100%
+	height: 495px
+	padding: 55px 80px
+	color: #fff
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	background-image: url(../img/foodcort/foodcort.png)
+	background-repeat: no-repeat
+	background-size: cover
+	&-title
+		font-family: $default-font
+		font-style: normal
+		font-weight: bold
+		font-size: 36px
+		line-height: 36px
+	&-text
+		margin-top: 12px
+		font-style: normal
+		font-weight: 500
+		font-size: 24px
+		line-height: 36px
+	.mfp-close
+		top: calc(-100% + 30px)
+		left: 103%
+		position: relative
+		color: transparent
+		&:before
+			position: absolute
+			transform: rotate(45deg)
+			top: 0
+			left: 0
+			content: ''
+			width: 3px
+			height: 40px
+			background-color: #C0C0C0
+		&:after
+			position: absolute
+			transform: rotate(-45deg)
+			top: 0
+			left: 0
+			content: ''
+			width: 3px
+			height: 40px
+			background-color: #C0C0C0
+			
+
+.ostrov
+	position: relative
+	background-color: #F9F9F9
+	max-width: 1200px
+	margin: 0 auto
+	padding: 50px
+	text-align: center
+	&-format
+		margin: 0 auto
+		padding: 12px 25px
+		border: 2px solid $hoverOrange
+		font-style: normal;
+		font-weight: bold
+		font-size: 16px
+		line-height: 29px
+		color: $hoverOrange
+	&-title
+		margin-top: 25px
+		text-align: center
+		font-style: normal
+		font-weight: bold
+		font-size: 36px
+		line-height: 42px
+	&-carantin
+		margin: 30px 0 60px
+		font-style: normal
+		font-weight: bold
+		font-size: 20px
+		line-height: 29px
+	&-line
+		height: 540px
+		display: flex
+		justify-content: space-between
+		background-color: #fff
+		&__title
+			text-align: left
+			font-style: normal
+			font-weight: bold
+			font-size: 32px
+			line-height: 42px
+		&__text
+			width: 50%
+			padding: 40px
+		&__list
+			width: 100%
+			list-style-type: none
+			text-align: left
+			padding-left: 0
+			&-item
+				margin-top: 30px
+				position: relative
+				font-style: normal
+				font-weight: normal
+				font-size: 20px
+				line-height: 32px
+				padding-left: 20px
+				&:before
+					position: absolute
+					content: ''
+					top: 12px
+					left: 0
+					width: 8px
+					height: 8px
+					background-color: $hoverOrange
+					border-radius: 50%
+		&__slider
+			width: 50%
+			&-item
+				width: 100%
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+	.mfp-close
+		top: 10px
+		left: calc(100% - 35px)
+.fast-casual
+	display: flex
+	align-items: center
+	margin: 0 auto
+	position: relative
+	width: 100%
+	height: 100vh
+	background: transparent
+	&__content
+		margin: 0 auto
+		height: 740px
+		max-width: 1260px
+		display: flex
+		justify-content: space-between
+		color: #fff
+		background-color: #fff
+		&-note
+			font-style: normal
+			font-weight: normal
+			font-size: 20px
+			line-height: 29px
+			margin-bottom: 40px
+		&-left
+			padding: 70px 45px
+			width: 50%
+			background-image: url(../img/fast-casual/bg.png)
+			background-repeat: no-repeat
+		&-list
+			padding-left: 25px
+			list-style-type: none
+		&-item
+			margin-bottom: 10px
+			position: relative
+			font-style: normal
+			font-weight: normal
+			font-size: 20px
+			line-height: 29px
+			&:before
+				position: absolute
+				content: ''
+				top: 9px
+				left: -22px
+				background-color: $hoverOrange
+				width: 12px
+				height: 12px
+				border-radius: 50%
+	&__form
+		padding: 60px
+		width: 50%
+		.djigit-right
+			margin: 0
+			.main-form
+				h3
+					font-weight: bold
+					font-size: 36px
+					line-height: 42px
+				.btn-orrange--fast
+					position: relative
+					padding: 42px 124px 42px 47px
+					&:before
+						content: ''
+						position: absolute
+						top: -18px
+						left: calc(100% - 145px)
+						width: 220px
+						height: 100px
+						background-image: url(../img/fast-casual/catalog-btn.png)
+						background-repeat: no-repeat
+	.mfp-close
+		top: 28px
+		right: 28px
+		
+.presentation
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 0 auto
+	position: relative
+	width: 100%
+	height: 100vh
+	background: transparent
+	&-wrap
+		background-color: #fff
+		max-width: 1200px
+		width: 100%
+		display: flex
+		flex-direction: column
+		padding: 65px
+	&-title
+		margin: 0 auto
+		max-width: 925px
+		width: 100%
+		text-align: center
+		font-style: normal
+		font-weight: bold
+		font-size: 42px
+		line-height: 48px
+	&-content
+		display: flex
+		justify-content: flex-end
+	&-img
+		width: 50%
+		position: relative
+		&__wrap
+			position: absolute
+			width: 950px
+			height: 480px
+			top: calc(50% - 160px)
+			left: -70%
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		
+	&-form
+		.djigit-right
+			margin-top: 10px
+	.mfp-close
+		top: 20px
+		right: 20px
+	
+.mfp-bg
+	background: rgba(37, 37, 37, 0.53)
+	backdrop-filter: blur(300px)
+	
+.mfp-close-btn-in
+	.mfp-close
+		color: transparent
+.mfp-close
+	position: absolute
+	&:before
+		position: absolute
+		transform: rotate(45deg)
+		top: 0
+		left: 0
+		content: ''
+		width: 3px
+		height: 40px
+		background-color: #fff
+	&:after
+		position: absolute
+		transform: rotate(-45deg)
+		top: 0
+		left: 0
+		content: ''
+		width: 3px
+		height: 40px
+		background-color: #fff
+	
 @import "media" // Always at the end

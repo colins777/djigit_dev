@@ -59,6 +59,24 @@ $(document).ready(function () {
             nextArrow: '<div class="nav-arrow next-arrow"><div class="arrow-inner-next"></div></div>'
         });
 
+        $('.ostrov-line__slider').slick({
+            dots: false,
+            infinite: false,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: '<div class="nav-arrow prev-arrow"><div class="arrow-inner-prev"></div></div>',
+            nextArrow: '<div class="nav-arrow next-arrow"><div class="arrow-inner-next"></div></div>'
+        });
+
+
+
+
+
+
     }
 
 
@@ -119,31 +137,34 @@ $(document).ready(function () {
         let backBtn = $('.quiz-form__btn--back'),
             nextBtn = $('.quiz-form__btn--forward'),
             sections = $('.quiz-section'),
-            currentSection = 0;
+            progressBarElements = $('.quiz-num');
+            currentSection = 0,
+            index = 0;
 
+        if (index === 0) {
+            $('.quiz-form__btn--back').addClass('not-active');
+        };
 
         //hide all section except first
         for (let i = 1; i < sections.length; i++) {
             sections[i].classList.add('not-active');
-        }
-
-        function hideElements () {
-            if (currentSection === sections.length) {
-                $('.quiz-bottom').classList.add('not-active');
-            }
-        }
+        };
 
         function loadQuestion (toHide, toShow) {
             sections[toShow].classList.remove('not-active');
             sections[toHide].classList.add('not-active');
-
             currentSection = toShow;
+            if (index < 4) {
+                progressBarElements[toHide].classList.remove('quiz-num--active');
+                progressBarElements[toShow].classList.add('quiz-num--active');
+            }
+
         };
+
 
         function showNextQuestion () {
             if (currentSection === sections.length - 1) {
                return;
-
             } else {
                 loadQuestion (currentSection, currentSection + 1);
             }
@@ -152,27 +173,53 @@ $(document).ready(function () {
         function showPrevQuestion () {
             if (currentSection === 0) {
                 return;
-
             } else {
                 loadQuestion (currentSection, currentSection - 1);
             }
         };
 
-
-
-
         nextBtn.click(function (e) {
             e.preventDefault();
-
+            index++;
+            console.log(index);
             showNextQuestion();
-            if (currentSection === sections.length) {
-                $('.quiz-bottom').classList.add('not-active');
+
+            if (index === 4) {
+                $('.quiz-numbers').addClass('not-active');
+                $('.quiz-bottom').addClass('not-active');
+                nextBtn.addClass('not-active');
+                backBtn.addClass('not-active');
+                $('.quiz-btn-orrange').removeClass('not-active');
+                $('.quiz-form .conf-politic').removeClass('not-active');
+                $('.quiz-title').addClass('not-active');
+                $('.quiz-title__final').removeClass('not-active');
+
+            };
+
+            if (index >= 1 && index < 4) {
+                backBtn.removeClass('not-active');
             }
         });
 
         backBtn.click(function (e) {
             e.preventDefault();
             showPrevQuestion();
+            index--;
+            console.log (index);
+
+            if (index >= 0) {
+                $('.quiz-bottom').removeClass('not-active');
+            };
+
+            if (index < 4) {
+                nextBtn.removeClass('not-active');
+                $('.quiz-btn-orrange').addClass('not-active');
+                $('.quiz-form .conf-politic').addClass('not-active');
+            };
+
+            if (index === 0) {
+                backBtn.addClass('not-active');
+            }
         })
 
     };
@@ -309,8 +356,48 @@ $(document).ready(function () {
         };
     }
 
+    $("a[href='#foodCort']").magnificPopup({
+        mainClass: 'my-mfp-zoom-in',
+        removalDelay: 300,
+        type: 'inline'
+    });
 
-    anchorNav()
+
+    $("a[href='#ostrov']").magnificPopup({
+        mainClass: 'my-mfp-zoom-in',
+        removalDelay: 300,
+        type: 'inline'
+    }, function () {
+        $('.ostrov-line__slider--bottom').slick({
+            dots: false,
+            infinite: false,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: '<div class="nav-arrow prev-arrow"><div class="arrow-inner-prev"></div></div>',
+            nextArrow: '<div class="nav-arrow next-arrow"><div class="arrow-inner-next"></div></div>'
+        });
+    });
+
+    $("a[href='#fast-casual']").magnificPopup({
+        mainClass: 'my-mfp-zoom-in',
+        removalDelay: 300,
+        type: 'inline'
+    });
+
+    $("a[href='#presentation']").magnificPopup({
+        mainClass: 'my-mfp-zoom-in',
+        removalDelay: 300,
+        type: 'inline'
+    });
+
+
+
+
+    anchorNav();
     slickSliders();
     changeNumslidesReviews();
     dropdownQusestions();

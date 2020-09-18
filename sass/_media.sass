@@ -52,13 +52,8 @@
 				width: 500px
 			&:before
 				top: 300px
+
 	
-	
-	.quiz
-		&-num
-			&--line
-				&:before
-					content: none
 
 					
 @media screen and (max-width: 1024px)
@@ -110,11 +105,21 @@
 		.demand-items
 			padding: 0 50px
 			max-width: 100%
+	.quiz
+		&-num
+			&--line
+				&:before
+					width: 200%
 			
 @media screen and (max-width: 768px)
 	.header-top
 		&__center
 			flex-direction: column
+	.quiz
+		&-num
+			&--line
+				&:before
+					content: none
 
 @media screen and (max-width: 480px)
 	.container
