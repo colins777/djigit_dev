@@ -173,7 +173,97 @@ section
 			font-size: 15px
 			line-height: 20px
 			opacity: 0.8
-			
+	&-sended
+		background-color: #fff
+		height: auto
+		&__wrap
+			height: auto
+		.mezhd-set
+			color: $defaultTextColor
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 4px
+				left: calc(100% + 25px)
+				width: 1px
+				height: 40px
+				background-color: $defaultTextColor
+		.onmarket
+			color: $defaultTextColor
+		.header-top__center-right
+			.btn-transparent
+				border: 1px solid $defaultTextColor
+				color: $defaultTextColor
+				svg
+					fill: $defaultTextColor
+			.phone-number
+				color: $defaultTextColor
+		.btn-transparent
+			border: 1px solid $defaultTextColor
+			color: $defaultTextColor
+			&:hover
+				color: $defaultTextColor
+		&__center
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			&-title
+				position: relative
+				margin-top: 110px
+				max-width: 880px
+				width: 100%
+				font-family: $TTNuksFont
+				font-style: normal
+				font-weight: normal
+				font-size: 80px
+				line-height: 88px
+				text-align: center
+				&:before
+					content: ''
+					position: absolute
+					top: 70px
+					left: -35%
+					width: 200px
+					height: 200px
+					background-image: url("../img/success-form/img-3.png")
+					background-repeat: no-repeat
+				&:after
+					content: ''
+					position: absolute
+					top: -65px
+					right: -35%
+					width: 200px
+					height: 200px
+					background-image: url("../img/success-form/img-2.png")
+					background-repeat: no-repeat
+			&-spec
+				margin-top: 65px
+				max-width: 730px
+				width: 100%
+				font-style: normal
+				font-weight: normal
+				font-size: 24px
+				line-height: 32px
+				text-align: center
+				&--day
+					margin-top: 50px
+.back-tosite
+	font-family: $TTHazelnuts-Medium
+	margin: 100px 0
+	font-style: normal
+	font-weight: bold
+	font-size: 15px
+	line-height: 20px
+	color: $hoverOrange
+	text-transform: uppercase
+	letter-spacing: 0.2em
+	text-align: center
+	&:hover
+		text-decoration: none
+		color: $hoverOrange
+	
 			
 .djigit
 	&-wrap
@@ -189,6 +279,8 @@ section
 			line-height: 140px
 			color: #289A00
 	&-descr
+		max-width: 540px
+		width: 100%
 		padding: 30px 30px 30px 50px
 		display: flex
 		align-items: center
@@ -208,6 +300,8 @@ section
 		font-size: 24px
 		line-height: 32px
 		color: #1A1A1A
+		a
+			color: #1A1A1A
 	&-img
 		max-width: 932px
 		width: 100%
@@ -619,6 +713,8 @@ section
 	.earnings
 		display: flex
 		flex-direction: column
+		&-slider
+			outline: none
 		&-title
 			margin-top: 32px
 			font-family: $default-font
@@ -2685,6 +2781,27 @@ section
 			font-size: 15px
 			line-height: 20px
 			color: #fff
+	&-sended
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: -136px
+			left: 19%
+			background-image: url("../img/success-form/img-1.png")
+			background-repeat: no-repeat
+			width: 300px
+			height: 136px
+		&:after
+			content: ''
+			position: absolute
+			top: -136px
+			right: 155px
+			background-image: url("../img/success-form/img-4.png")
+			background-repeat: no-repeat
+			width: 200px
+			height: 160px
+		
 	
 		
 .tooltip
@@ -2716,6 +2833,7 @@ section
 		position: relative
 		display: inline-block
 		cursor: pointer
+		line-height: 25px
 		&-show
 			opacity: 0
 			position: absolute
@@ -2821,12 +2939,14 @@ section
 		display: block
 		
 button,
-button:active,
 button:focus,
+button:active,
 input[type="submit"]
 	outline: none
 	cursor: pointer
 	border: none
+//button:active
+//	border: 5px solid #ff6000
 .btn
 	&-transparent
 		border: 1px solid #fff
@@ -3133,7 +3253,7 @@ form
 		margin: 0 auto
 		padding: 12px 25px
 		border: 2px solid $hoverOrange
-		font-style: normal;
+		font-style: normal
 		font-weight: bold
 		font-size: 16px
 		line-height: 29px
@@ -3198,14 +3318,20 @@ form
 	.mfp-close
 		top: 10px
 		left: calc(100% - 35px)
-.fast-casual
+		
+//FORMS
+
+.form-big
 	display: flex
 	align-items: center
+	justify-content: center
 	margin: 0 auto
 	position: relative
 	width: 100%
 	height: 100vh
 	background: transparent
+
+.fast-casual
 	&__content
 		margin: 0 auto
 		height: 740px
@@ -3271,14 +3397,6 @@ form
 		right: 28px
 		
 .presentation
-	display: flex
-	align-items: center
-	justify-content: center
-	margin: 0 auto
-	position: relative
-	width: 100%
-	height: 100vh
-	background: transparent
 	&-wrap
 		background-color: #fff
 		max-width: 1200px
@@ -3318,16 +3436,250 @@ form
 	.mfp-close
 		top: 20px
 		right: 20px
+		
+.inventure
+	height: auto
+	&-wrap
+		background-color: #fff
+		max-width: 1200px
+		width: 100%
+		display: flex
+		flex-direction: column
+	&-top
+		position: relative
+		padding: 70px 100px 72px
+		display: flex
+		flex-direction: column
+		align-items: center
+		&:before
+			position: absolute
+			content: ''
+			bottom: -42px
+			left: 40%
+			width: 165px
+			height: 125px
+			background-image: url("../img/inventure/image-1.png")
+			background-repeat: no-repeat
+			z-index: 1
+		&:after
+			position: absolute
+			content: ''
+			top: 65%
+			left: calc(100% - 78px)
+			width: 165px
+			height: 125px
+			background-image: url("../img/inventure/image-2.png")
+			background-repeat: no-repeat
+			z-index: 1
+	&-text
+		margin-top: 22px
+		max-width: 825px
+		width: 100%
+		font-style: normal
+		font-weight: normal
+		font-size: 22px
+		line-height: 29px
+		text-align: center
+		b
+			font-family: $TTHazelnuts-Medium
+			font-weight: bold
+	&-title
+		max-width: 790px
+		width: 100%
+		margin-top: 35px
+		font-style: normal
+		font-weight: bold
+		font-size: 36px
+		line-height: 42px
+		text-align: center
+	&-orange
+		position: relative
+		margin-top: 56px
+		padding: 35px
+		background-color: #FF7A00
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 165px
+			height: 125px
+			background-image: url("../img/inventure/image-4.png")
+			background-repeat: no-repeat
+			z-index: 0
+		&:after
+			content: ''
+			position: absolute
+			bottom: -2px
+			right: 0
+			width: 218px
+			height: 120px
+			background-image: url("../img/inventure/image-5.png")
+			background-repeat: no-repeat
+			z-index: 0
+			
+		&__descr
+			position: relative
+			margin-top: 18px
+			color: #fff
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+		&__title
+			margin-left: 100px
+			color: #fff
+			font-style: normal
+			font-weight: bold
+			font-size: 24px
+			line-height: 29px
+			opacity: .9
+		&__num
+			margin-right: 25px
+			font-style: normal
+			font-weight: normal
+			font-size: 52px
+			line-height: 52px
+			letter-spacing: 0.01em
+		&__text
+			font-style: normal
+			font-weight: bold
+			font-size: 20px
+			line-height: 29px
+			font-family: $TTHazelnutsThin
+			opacity: .8
+			
+.callback
+	&-hidden
+		display: none
+	&-wrap
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		background-color: #fff
+		max-width: 800px
+		width: 100%
+		padding: 62px 100px
+		&:before
+			content: ''
+			position: absolute
+			top: 250px
+			left: 0
+			background-image: url("../img/callback-form/callback-2.png")
+			background-repeat: no-repeat
+			width: 130px
+			height: 240px
+		&:after
+			content: ''
+			position: absolute
+			bottom: 40px
+			right: -8px
+			background-image: url("../img/callback-form/callback-1.png")
+			background-repeat: no-repeat
+			width: 130px
+			height: 240px
+	&-title
+		max-width: 570px
+		width: 100%
+		font-style: normal
+		font-weight: bold
+		font-size: 42px
+		line-height: 48px
+		text-align: center
+	&-text
+		margin-top: 40px
+		margin-bottom: 0
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 29px
+		text-align: center
+	&-form
+		form
+			max-width: 480px
+			width: 100%
+			input
+				width: 100%
+				padding: 44px 0 22px 0
+				text-align: center
+				border-bottom: 1px solid #1A1A1A
+				font-size: 20px
+				line-height: 32px
+				color: #A3A3A3
+				opacity: .6
+		.conf-politic
+			font-style: normal
+			font-weight: normal
+			font-size: 12px
+			line-height: 16px
+			text-align: center
+			color: #B5B5B5
+			padding: 20px 10px
+			a
+				color: #B5B5B5
+				text-decoration: underline
+		.btn-callback
+			margin-top: 55px
+		.btns-time
+			margin-top: 20px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			.btn
+				&-time
+					cursor: pointer
+					padding: 7px 72px
+					background-color: #F5F5F5
+					border-radius: 4px
+					font-style: normal
+					font-weight: bold
+					font-size: 18px
+					line-height: 32px
+				&--active
+					background-color: #FF7A00
+					color: #fff
+		.btn-callback
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: -45px
+				left: 73%
+				background-image: url("../img/callback-form/callback-3.png")
+				background-repeat: no-repeat
+				width: 130px
+				height: 180px
+						
+						
+
+		#intime-field
+			display: none
+	&-time
+		&__title
+			margin-top: 35px
+			font-style: normal
+			font-weight: normal
+			font-size: 20px
+			line-height: 29px
+			text-align: center
+	
+		
+
 	
 .mfp-bg
-	background: rgba(37, 37, 37, 0.53)
-	backdrop-filter: blur(300px)
+	//background: rgba(37, 37, 37, 0.53)
+	//backdrop-filter: blur(300px)
+	background-image: url("../img/universal-images/forms-bg.png")
+	background-size: cover
+	background-repeat: no-repeat
+	opacity: 1
 	
 .mfp-close-btn-in
 	.mfp-close
 		color: transparent
 .mfp-close
 	position: absolute
+	opacity: 1
 	&:before
 		position: absolute
 		transform: rotate(45deg)
