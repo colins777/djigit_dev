@@ -12,7 +12,7 @@
 				padding: 0
 				width: 100%
 			&-item
-				max-width: 50%
+				max-width: 48%
 		&-title
 			&__demand
 				&:after
@@ -21,8 +21,28 @@
 		&-item
 			&--green
 				padding: 100px
+				justify-content: center
+	.success
+		&:before
+			left: -100px
 					
 @media screen and (max-width: 1366px)
+	.header
+		.onmarket
+			margin-right: 20px
+	.header-sended
+		&__wrap
+			&:before
+				content: none
+		.mezhd-set
+			&:before
+				content: none
+		&__center
+			&-title
+				&:before
+					left: -10%
+				&:after
+					right: -20%
 	.adv
 		&-yellow
 			.yellow-left
@@ -77,6 +97,13 @@
 					.mezhd-set
 						font-size: 12px
 						line-height: 18px
+	.djigit
+		&-left
+			width: 50%
+			.h2
+				font-size: 100px
+		&-img
+			margin-left: 70px
 	.adv
 		&-item
 			flex-direction: column
@@ -96,6 +123,12 @@
 		&:after
 			top: 0
 			left: 72%
+		&-title
+			&--cost
+				&:after
+					content: none
+		&-connect
+			left: 70%
 		&-squares
 			flex-wrap: wrap
 			.squares-item
@@ -105,31 +138,150 @@
 		.demand-items
 			padding: 0 50px
 			max-width: 100%
+		.earnings-item
+			height: 600px
+		.earnings-item--grey
+			padding: 30px
+	.form-rules
+		&__inner
+			max-width: 900px
+
+	.graph-slider
+		&__title
+			font-size: 20px
+			&-note
+				font-size: 18px
+				line-height: 20px
+		&__profit-num
+			font-size: 30px
+			line-height: 32px
+	.indicators
+		&-center
+			&__title
+				font-size: 50px
+				line-height: 55px
+	.getDetailPresent
+		&-left
+			width: 40%
+			margin-right: 5%
+		&-center
+			&:before
+				left: -192px
+	.concept
+		&-items
+			margin-top: 50px
+		&-item
+			height: auto
+			&--grey
+				padding: 20px
+			&__title
+				&--black
+					&:before
+						content: none
+	.monitor
+		&-trends
+			&__item
+				&-img
+					padding-left: 0
+				&-title
+					&:before
+						content: none
+				&--right
+					padding: 20px
+					justify-content: center
+					align-items: center
+	.form-invest
+		padding-top: 0
+		&__inner
+			padding: 50px 30px
+		&:after
+			top: 50px
+			width: 50%
+			height: 400px
+			background-size: cover
+	.quote
+		&:before
+			content: none
+		&-wrap
+			&:before
+				left: 50px
+	.guests
+		&-steps
+			&__title
+				padding-left: 20px
+				
+	.stages
+		&-item
+			max-width: 50%
+	.experience
+		&-item
+			&--orange
+				width: 80%
+				margin: 0 auto
+				padding: 30px
+	.success
+		&:after
+			content: none
+		&:before
+			content: none
+		&-right
+			&__images
+				&:after
+					right: -115px
 	.quiz
+		&:before
+			left: -80px
+		&:after
+			right: -20px
+		&-bottom
+			&:before
+				width: 100px
+				height: 120px
+				background-size: cover
+				top: 150px
+		&-question-3
+			&__line
+				& > *
+					&:not(:last-child)
+						margin-right: 10px
+		&-question-4
+			&__top
+				padding: 30px 60px
 		&-num
 			&--line
 				&:before
 					width: 200%
+	.footer
+		&-top
+			&__left
+				justify-content: space-around
+				
+				
+	//FORMS
+	.fast-casual
+		&__content
+			height: 100vh
+			&-left
+				background-size: cover
+		.mfp-close
+			top: -60px
+			right: 0
 			
-@media screen and (max-width: 768px)
-	.header-top
-		&__center
-			flex-direction: column
-	.quiz
-		&-num
-			&--line
-				&:before
-					content: none
+	.presentation
+		&-img
+			&__wrap
+				left: -115%
+		.mfp-close
+			right: 0
+		
 
-@media screen and (max-width: 480px)
-	.container
-		padding: 0 10px
-	.h1
-		font-size: 35px
-		text-align: center
+
+@media screen and (max-width: 768px)
 	.header
 		height: auto
 		padding-top: 15px
+		.logo
+			margin-right: 0
 		&-top
 			flex-direction: column
 			&__center
@@ -154,6 +306,275 @@
 							margin-right: 10px
 					.phone-number
 						margin: 10px auto
+	.djigit
+		&-wrap
+			flex-direction: column
+			justify-content: center
+			align-items: center
+		&-left
+			width: 100%
+	.reasons
+		&-top
+			padding-left: 0
+		.earnings
+			&-items
+				flex-direction: column
+			&-item
+				padding: 30px
+				width: 100%
+				height: auto
+				&--grey
+					height: auto
+				&--slider
+					padding: 0
+	.form-rules
+		&__inner
+			padding: 40px
+			max-width: 600px
+	.graph
+		&:after
+			content: none
+		&-slider
+			&__title
+				text-align: center
+			&__item
+				flex-direction: column
+			&__left
+				max-width: 100%
+				width: 100%
+				align-items: center
+				justify-content: center
+				display: flex
+				flex-direction: column
+			&__right
+				width: 100%
+				max-width: 768px
+				height: auto
+			&__profit
+				text-align: center
+	.indicators
+		&-center
+			padding: 0
+			
+	.getDetailPresent
+		padding: 0
+		&-left
+			width: 100%
+		&-center
+			flex-direction: column
+			&:before
+				left: 5%
+				
+	.concept
+		&-item
+			&__title
+				&--white
+					&:before
+						content: none
+	
+	.recomend
+		&-item
+			padding: 0
+			&__img
+				&--left
+					max-width: 100%
+					height: 100%
+					padding: 0
+					img
+						object-fit: contain
+						width: 100%
+						height: 100%
+	.form-invest
+		&:after
+			display: none
+		&__inner
+			text-align: center
+			margin: 0 auto
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+		&__btn
+			display: flex
+			justify-content: center
+	.stages
+		&-title
+			font-size: 60px
+			line-height: 70px
+			&:before
+				content: none
+	.reviews
+		&-people
+			&__slider
+				max-width: 700px
+				&-item
+					&-wrap
+						flex-direction: column
+						align-items: center
+						padding: 20px
+						width: 100%
+				&-left
+					max-width: 100%
+					margin-right: 0
+					margin-bottom: 20px
+				&-nav
+					&:after
+						width: 30%
+						right: 12%
+					&:before
+						width: 30%
+						left: 13%
+						
+	.experience
+		&-item
+			padding: 20px
+			&--leaf
+				&:after
+					top: 150px
+					right: 5%
+			&--leaf-2
+				&:before
+					top: 0
+		&-bottom
+			padding: 20px
+			&__title
+				font-size: 60px
+				line-height: 70px
+			&__note
+				font-size: 45px
+				line-height: 50px
+				
+	.success
+		padding-top: 0
+		&-wrap
+			padding: 0 30px
+			justify-content: center
+		&-form
+			max-width: 100%
+		&-left
+			margin-right: 0
+		&-right
+			&__images
+				&:after
+					right: -175px
+	.questions
+		&-right
+			flex-shrink: 0
+		&-answer
+			top: 95px
+			
+	.contacts
+		&-title
+			font-size: 30px
+			line-height: 35px
+		&-note
+			font-size: 20px
+			line-height: 25px
+			margin-top: 15px
+		&-buttons
+			flex-direction: column
+			align-items: center
+		&-btn
+			margin-bottom: 10px
+			&:not(:last-child)
+				margin-right: 0
+		&-number
+			font-size: 50px
+			line-height: 60px
+	.map
+		&-left
+			left: 40px
+			max-width: 300px
+		&-title
+			font-size: 20px
+			line-height: 25px
+		
+	.quiz
+		&:after
+			content: none
+		&-num
+			&--line
+				&:before
+					content: none
+		&-form
+			&__wrap
+				input[type="text"]
+					font-size: 18px
+					line-height: 20px
+		&-final
+			&__manager
+				top: -110px
+				left: 90%
+		&-bottom
+			&:before
+				top: 175px
+		&-question-4__top
+			padding: 20px
+	
+	.footer
+		&-logo
+			margin-bottom: 20px
+		&-top
+			align-items: center
+			&__left
+				flex-direction: column
+				align-items: center
+			&__right
+				.phone-number
+					font-size: 18px
+			&__buttons
+				flex-direction: column
+				align-items: center
+				& > *
+					&:not(:last-child)
+						margin-right: 0
+						margin-bottom: 10px
+			&__center
+				.footer-online
+					text-align: center
+					
+	//Tooltip
+	.tooltip-iterior
+		&-show
+			left: 20px
+			top: 42px
+			width: 250px
+	//FORMS
+	.fast-casual
+		&__content
+			height: auto
+			flex-wrap: wrap
+			max-width: 600px
+			&-left
+				width: 100%
+		&__form
+			width: 100%
+		.mfp-close
+			top: 20px
+	.presentation
+		&-content
+			flex-direction: column
+			align-items: center
+		&-img
+			width: 100%
+			height: 400px
+			&__wrap
+				left: 0
+				width: 100%
+				img
+					object-fit: cover
+					width: 100%
+					height: 75%
+		.mfp-close
+			top: -160px
+
+@media screen and (max-width: 480px)
+	.container
+		padding: 0 10px
+	.h1
+		font-size: 35px
+		text-align: center
+	.header
 		&-descr
 			margin-top: 30px
 			&-wrap
@@ -176,21 +597,36 @@
 					&--bottom
 						text-align: left
 			&__owner
+				text-align: center
 				font-size: 20px
 				line-height: 25px
 			&__exp
+				text-align: center
 				font-size: 20px
 				line-height: 25px
 			&__details
 				margin-top: 100px
 				padding-bottom: 20px
-		&-img-circle
-			display: none
+		&-wrap
+			&:after
+				content: none
+		
 		.btn-orrange--cat
 			padding: 42px 0 42px 18px
 			font-size: 14px
 			&:before
 				right: -132px
+		&-sended
+			&__center-title
+				margin-top: 60px
+				font-size: 50px
+				line-height: 60px
+				&:before
+					margin-top: 60px
+				&:after
+					content: none
+		.btn-orrange--cat
+			padding: 30px 60px
 	.djigit
 		padding-top: 30px
 		&-wrap
@@ -203,6 +639,7 @@
 			padding: 10px
 		&-img
 			left: 0
+			margin-left: 0
 	.adv
 		&-right
 			flex-direction: column
@@ -212,20 +649,30 @@
 		padding-top: 0
 		&-top
 			padding-left: 0
+			text-align: center
 		&-title
 			font-size: 55px
 			line-height: 55px
 			&--cost:after
 				display: none
+			&--earnings
+				font-size: 40px
+				line-height: 40px
+				text-align: center
 			&__prev
 				white-space: nowrap
 				font-size: 20px
 				text-align: center
+				&:after
+					content: none
 			&__demand
 				font-size: 40px
 				line-height: 40px
+				text-align: center
 				&:after
 					content: none
+		.earnings-title
+			text-align: center
 				
 		&-connect
 			display: none
@@ -236,6 +683,8 @@
 				height: auto
 			&__bottom
 				padding: 10px
+				font-size: 23px
+				text-align: justify
 		.demand
 			&-items
 				padding: 0 10px
@@ -248,4 +697,189 @@
 				&__descr
 					&-text
 						font-size: 18px
+	.form-rules
+		&__btn
+			.btn-transparent
+				font-size: 10px
+				line-height: 12px
+	.graph
+		&-title
+			font-size: 55px
+			line-height: 55px
+			&__descr
+				font-size: 30px
+				line-height: 30px
+				
+	.getDetailPresent
+		&-left
+			margin-right: 0
+			&__title
+				font-size: 30px
+				line-height: 35px
+		&-center
+			padding: 40px 20px
+	.concept
+		&-header
+			&__title
+				font-size: 40px
+			&__descr
+				padding: 0 20px
+		&-items
+			flex-direction: column
+		&-item
+			width: 100%
+			&--green
+				padding: 30px 20px
+			&__title
+				font-size: 40px
+				line-height: 40px
+			&__icon
+				&-descr
+					font-size: 24px
+	.recomend
+		padding: 40px 0
+		&-items
+			flex-direction: column
+			align-items: center
+			&:before
+				content: none
+			&:after
+				content: none
+		&-item
+			margin-bottom: 20px
+			display: flex
+			justify-content: center
+			text-align: center
+			width: 100%
+			&__img
+				img
+					width: 100%
+	.monitor
+		&-trends
+			flex-direction: column
+			align-items: center
+			&__item
+				width: 100%
+				&-title
+					font-size: 30px
+					line-height: 30px
+	.form-invest
+		&__title
+			font-size: 40px
+			line-height: 40px
+		&__btn
+			.btn-white
+				line-height: 20px
+	.pizzeria
+		&-top
+			padding: 0 20px
+			&__prev
+				border-bottom: none
+				text-align: center
+				line-height: 24px
+		&-title
+			text-align: center
+			font-size: 40px
+			line-height: 40px
+		&-content
+			flex-direction: column
+		&-item
+			width: 100%
+			padding: 60px 20px
+			.tooltip-iterior-show
+				font-size: 12px
+				line-height: 14px
+				width: 200px
+				padding: 10px
+	.quote
+		padding: 0
+		&-wrap
+			padding: 0 20px
+			&:after
+				top: 12%
+				right: 0
+			&:before
+				top: 12%
+				left: 5px
+		&-text
+			font-size: 18px
+			padding: 0 40px
+		&-btn
+			.btn-transparent
+				font-size: 16px
+				line-height: 18px
+				white-space: inherit
+				text-align: center
+	.guests
+		&-top
+			padding: 0 20px
+		&-title
+			font-size: 40px
+			line-height: 40px
+			text-align: center
+		&-steps
+			&__line
+				flex-direction: column
+				&--mobile
+					flex-direction: row
+					padding: 0 5px
+			&__right
+				max-width: 100%
+		.tooltip-guests-show
+			max-width: 150px
+			top: 40px
+			left: -200px
+			&:before
+				left: 83%
+				top: -14px
+				transform: rotate(90deg)
+	.stages
+		&-top
+			padding: 0 20px
+		&-title
+			text-align: center
+			font-size: 40px
+			line-height: 40px
+		&-content
+			flex-direction: column
+		&-item
+			max-width: 100%
+			&:not(:last-child)
+				border-right: none
+	.instructions
+		&-title
+			font-size: 28px
+			line-height: 28px
+			padding: 0 20px
+		&-content
+			flex-direction: column
+			&__item
+				max-width: 100%
+			&__title
+				font-size: 16px
+		&-bottom
+			&__note
+				font-size: 16px
+				padding: 0 20px
+			&__btn
+				padding: 0 20px
+				.btn-orrange
+					text-align: center
+					padding: 32px 40px
+					
+	.reviews
+		&-title
+			font-size: 40px
+			line-height: 45px
+		&-people__slider
+			&-right
+				max-width: 60%
+				text-align: justify
+		&-bottom__btn
+			padding: 0 20px
+			
+	.footer
+		&-sended
+			&:before
+				content: none
 				

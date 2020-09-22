@@ -72,8 +72,8 @@ section
 		position: absolute
 		top: 0
 		left: 35%
-		width: 15%
-		height: 20%
+		width: 300px
+		height: 200px
 		content: ''
 		background-image: url("../img/header-img/circle-top.png")
 		background-repeat: no-repeat
@@ -85,25 +85,25 @@ section
 		
 		&:hover
 			text-decoration: none
-	&-img
-		&-grape
+	&-wrap
+		height: 100%
+		width: 100%
+		&:before
 			position: absolute
-			top: 85%
-			left: 71%
-			max-width: 440px
-			width: 100%
-			height: 100%
+			bottom: 0
+			left: 58%
+			width: 445px
+			height: 170px
 			content: ''
 			background-image: url("../img/header-img/grapes-bottom.png")
 			background-repeat: no-repeat
 			opacity: .3
-		&-circle
+		&:after
 			position: absolute
-			top: 80%
-			left: 88%
-			max-width: 160px
-			width: 100%
-			height: 100%
+			bottom: 0
+			left: 82%
+			width: 200px
+			height: 200px
 			content: ''
 			background-image: url("../img/header-img/circle-bottom.png")
 			background-repeat: no-repeat
@@ -247,8 +247,19 @@ section
 				font-size: 24px
 				line-height: 32px
 				text-align: center
+				&--img
+					margin-top: -35px
 				&--day
 					margin-top: 50px
+					margin-bottom: 0
+		&__catalog
+			margin-top: 20px
+			width: 505px
+			height: 280px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 .back-tosite
 	font-family: $TTHazelnuts-Medium
 	margin: 100px 0
@@ -263,6 +274,8 @@ section
 	&:hover
 		text-decoration: none
 		color: $hoverOrange
+	&--img
+		margin: 65px 0 115px
 	
 			
 .djigit
@@ -2308,6 +2321,7 @@ section
 		&::-webkit-scrollbar-thumb
 			background-color: #DDDDDD
 		&__item
+			cursor: inherit
 			position: relative
 			display: block
 			background-color: #fff
@@ -2582,7 +2596,7 @@ section
 			max-width: 305px
 			&:not(:last-child)
 				margin-right: 22px
-		input[type=radio]
+		input[type=checkbox]
 			display: none
 		label
 			cursor: pointer
@@ -2598,7 +2612,7 @@ section
 			font-size: 32px
 			line-height: 40px
 			border-radius: 8px
-		input[type=radio]:checked + label
+		input[type=checkbox]:checked + label
 			background-color: #fd7e14
 			color: #fff
 		input[type=radio]:not + label

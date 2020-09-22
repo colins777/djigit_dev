@@ -30,6 +30,7 @@
 	<!-- Custom HTML -->
 
 <div class="header" style="background-image: url(/img/header_bg.png)">
+    <div class="header-wrap">
         <div class="header-top">
             <div class="logo">
                 <img src="/img/header-logo.png" alt="">
@@ -70,7 +71,7 @@
                 </div>
             </div> <!--container-->
 
-            <a class="btn-transparent" href="#callback-form">Перезвоните мне</a>
+            <a class="btn-transparent" href="#callback-popup">Перезвоните мне</a>
         </div> <!--header-top-->
 
         <div class="header-descr">
@@ -88,10 +89,8 @@
                     <span class="header-descr__details">*Средний доход в месяц cогласно данным отчетности партнеров</span>
                 </div>
             </div>
-        </div>
-
-        <div class="header-img-grape"></div>
-        <div class="header-img-circle"></div>
+        </div> <!--header-descr-->
+    </div>
     </div> <!--header-->
 
 <section class="djigit">
@@ -109,16 +108,17 @@
                 </div> <!--djigit-left-->
 
                 <div class="djigit-right">
-                    <form action="" class="main-form">
+                    <form id="getPresentation-1" class="main-form" method="get">
                         <h3 class="h3">Получите презентацию франшизы<br>с расчетом стоимости и окупаемости вложений</h3>
-                        <input id="name" type="text" placeholder="Ваше имя">
-                        <input type="tel" placeholder="+7 916 777 7777">
+                        <input type="hidden" name="admin_email" value="rumyga@gmail.com">
+                        <input type="hidden" name="form_subject" value="Заявка с сайта Джигит">
 
-                        <input type="mail" placeholder="info@mail.ru">
-
-                        <a href="#callback" class="btn-orrange">
+                        <input name="client_name" type="text" placeholder="Ваше имя" required="required">
+                        <input type="tel" name="client_phone" placeholder="+7 916 777 7777" required="required">
+                        <input type="mail" name="client_mail" placeholder="info@mail.ru" required="required">
+                        <button type="submit" href="#callback" class="btn-orrange">
                             Получить презентацию
-                        </a>
+                        </button>
 
                         <span class="conf-polictic">
                         Нажимая на кнопку, вы даете согласие на обработку своих персональных данных  и соглашаетесь ﻿с <a href="https://docs.google.com/document/d/1r6O2ncErnOISNK88wCtSSK_EEhFcVJT_X5pHIfWnPu8/edit" target="_blank">Политикой конфиденциальности</a>
@@ -564,16 +564,19 @@
             <div class="getDetailPresent-right">
 
                 <div class="getDetailPresent-right__form">
-                    <form action="" class="main-form">
+                    <form id="getPresentation-2" class="main-form" method="get">
                         <h3 class="h3">Оставьте свои контактные данные и через 5 минут мы пришлем презентацию  с расчетом прибыли и окупаемости</h3>
-                        <input id="name" type="text" placeholder="Ваше имя" required="required">
-                        <input type="tel" placeholder="+7 916 777 7777" required="required">
+                        <input type="hidden" name="admin_email" value="rumyga@gmail.com">
+                        <input type="hidden" name="form_subject" value="Заявка с сайта Джигит">
 
-                        <input type="mail" placeholder="info@mail.ru" required="required">
+                        <input type="text" name="client_name" placeholder="Ваше имя" required="required">
+                        <input type="tel" name="client_phone" placeholder="+7 916 777 7777" required="required">
 
-                        <a href="#callback" class="btn-orrange">
+                        <input type="mail" name="client_mail" placeholder="info@mail.ru" required="required">
+
+                        <button type="submit" class="btn-orrange">
                             Получить презентацию
-                        </a>
+                        </button>
 
                         <span class="conf-polictic">
                         Нажимая на кнопку, вы даете согласие на обработку своих персональных данных  и соглашаетесь ﻿с <a href="https://docs.google.com/document/d/1r6O2ncErnOISNK88wCtSSK_EEhFcVJT_X5pHIfWnPu8/edit" target="_blank">Политикой конфиденциальности</a>
@@ -620,7 +623,7 @@
                             Шеф-повара — исключительно грузины<br> ﻿c многолетним опытом работы
                           <span class="concept__tooltip-wrap">
                                <img class="concept-item__tooltip-img" src="/img/universal-images/tooltip-question.png" alt="Концепт ресторанов Джигит">
-                            <span class="tooltip">Сфера услуг гостепреииства и общественного питания</span>
+                            <span class="tooltip">Сфера услуг гостепреимства и общественного питания</span>
                           </span>
                         </p>
                     </div><!-- concept-item__icon-->
@@ -660,7 +663,7 @@
         <div class="recomend-items">
 
             <div class="recomend-item">
-                <div class="recomend-item__img">
+                <div class="recomend-item__img recomend-item__img--left">
                     <img src="/img/recomend/guru-1.png" alt="Restaurant Guru">
                 </div>
             </div> <!--recomend-item-->
@@ -713,7 +716,7 @@
                     с расчетом инвестиций и прибыли
                 </p>
                 <div class="form-invest__btn">
-                    <a href="" class="btn-white">Получить презентацию</a>
+                    <a href="#presentation" class="btn-white">Получить презентацию</a>
                 </div>
 
             </div>
@@ -808,8 +811,7 @@
                 </div>
 
                 <div class="quote-btn">
-                    <a class="btn-transparent btn-transparent--white" href="#">Узнать условия приобретения франшизы
-                        «Джигит»</a>
+                    <a href="#presentation" class="btn-transparent btn-transparent--white">Узнать условия приобретения франшизы «Джигит»</a>
                 </div>
             </div>
         </div> <!--container-thin-->
@@ -826,7 +828,7 @@
             </div>
 
             <div class="guests-steps">
-                <div class="guests-steps__line">
+                <div class="guests-steps__line guests-steps__line--mobile">
                     <div class="guests-steps__left">
                         <h3 class="guests-steps__title">
                             Этапы запуска
@@ -1088,7 +1090,7 @@
                 <div class="instructions-bottom">
                     <p class="instructions-bottom__note">Получите презентацию и узнайте подробнее о процессе запуска ресторана</p>
                     <div class="instructions-bottom__btn">
-                        <a href="#callback" class="btn-orrange">Получить презентацию</a>
+                        <a href="#presentation" class="btn-orrange">Получить презентацию</a>
                     </div>
                 </div>
             </div> <!--container-thin-->
@@ -1176,7 +1178,7 @@
                 </div> <!--reviews-bottom__slider-->
 
                 <div class="reviews-bottom__btn">
-                    <a class="btn-transparent btn-transparent--white" href="#">Узнать условия приобретения</a>
+                    <a class="btn-transparent btn-transparent--white" href="#presentation">Узнать условия приобретения</a>
                 </div>
             </div> <!--reviews-bottom-->
         </div> <!--container-thin-->
@@ -1269,11 +1271,13 @@
                     </div> <!--success-text-->
 
                     <div class="success-form">
-                        <form action="" class="main-form">
-                            <input id="name" type="text" placeholder="Ваше имя">
-                            <input type="tel" placeholder="+7 916 777 7777">
+                        <form action="" class="main-form" method="get">
+                            <input type="hidden" name="admin_email" value="rumyga@gmail.com">
+                            <input type="hidden" name="form_subject" value="Заявка с сайта Джигит">
 
-                            <input type="mail" placeholder="info@mail.ru">
+                            <input name="client_name" type="text" placeholder="Ваше имя" required="required">
+                            <input type="tel" name="client_phone" placeholder="+7 916 777 7777" required="required">
+                            <input type="mail" name="client_mail" placeholder="info@mail.ru" required="required">
 
                             <button type="submit" class="btn-orrange btn-orrange--success">
                                 Согласовать дату<br> и время онлайн-встречи
@@ -1472,7 +1476,10 @@
             </div>
 
             <div class="quiz-form__wrap">
-                <form class="quiz-form" action="" method="get">
+                <form class="quiz-form" method="get">
+                    <input type="hidden" name="admin_email" value="rumyga@gmail.com">
+                    <input type="hidden" name="form_subject" value="Заявка с сайта Джигит">
+
                     <div id="quiz-question-1" class="quiz-section quiz-question-1 quiz-active">
                         <label class="quiz-question" for="quiz-city">Где вы планируете открывать ресторан грузинской кухни?</label>
                         <input type="text" name="client-city" placeholder="Напишите страну и город, например: Россия, Самара" id="quiz-city">
@@ -1480,17 +1487,18 @@
 
                     <div id="quiz-question-2" class="quiz-section quiz-question-2">
                         <h3 class="quiz-question">Есть ли у вас опыт в бизнесе?</h3>
+
                         <div class="quiz-question-2__wrap">
                             <div class="quiz-question-2__btn">
-                                <input type="radio" id="Yes" name="experience" value="Да">
-                                <label class="question-2__option"  for="Yes">Да</label>
+                                <input id="уes" type="checkbox" name="Есть опыт">
+                                <label class="question-2__option"  for="уes">Да</label>
                             </div>
 
                             <div class="quiz-question-2__btn">
-                                <input type="radio" id="No" name="experience" value="Нет" checked />
-                                <label class="question-2__option" for="No">Нет</label>
+                                <input id="no" type="checkbox" name="Нет опыта в бизнесе">
+                                <label class="question-2__option" for="no">Нет</label>
                             </div>
-                        </div>
+                        </div> <!--quiz-question-2__wrap-->
                     </div> <!--quiz-question-2-->
 
                     <div id="quiz-question-3" class="quiz-section quiz-question-3">
@@ -1573,9 +1581,9 @@
                     </div>
 
                     <div class="quiz-section quiz-final main-form" id="quiz-question-5">
-                            <input id="name" type="text" name="Name" placeholder="Ваше имя" required="required">
-                            <input type="tel" placeholder="+7 916 777 7777" name="phone" required="required">
-                            <input type="mail" placeholder="info@mail.ru" name="Email" required="required">
+                            <input id="name" type="text" name="client_name" placeholder="Ваше имя" required="required">
+                            <input type="tel" placeholder="+7 916 777 7777" name="client_phone" required="required">
+                            <input type="mail" placeholder="info@mail.ru" name="client_mail" required="required">
                         <span class="quiz-form__note">Мы также ответим на все ваши вопросы</span>
 
                         <div class="quiz-final__manager">
@@ -1605,7 +1613,7 @@
                 <div class="quiz-descr">
                     <p>Чтобы ресторан гарантированно приносил прибыль, мы открываем их в городах
                         ﻿с населением от 100 000 человек</p>
-                    <a href="#" class="quiz-descr__link">Получить консультацию</a>
+                    <a href="#callback-popup" class="quiz-descr__link">Получить консультацию</a>
                 </div>
             </div> <!--quiz-bottom-->
         </div>
@@ -1655,7 +1663,7 @@
 
                 <div class="footer-top__right">
                     <a class="phone-number" href="tel:+38 (044) 209-28-66">+38 (044) 209-28-66</a>
-                    <a class="btn-transparent" href="#callback-form">Перезвоните мне</a>
+                    <a class="btn-transparent" href="#callback-popup">Перезвоните мне</a>
                 </div>
 
             </div> <!--footer-top-->
@@ -1793,15 +1801,16 @@
 
                 <div class="fast-casual__form">
                     <div class="djigit-right">
-                        <form action="" class="main-form">
+                        <form id="fast-casual-form" class="main-form" method="get">
                             <h3 class="h3">Получите презентацию с расчетом стоимости и окупаемости вложений</h3>
 
                             <input type="hidden" name="admin_email" value="rumyga@gmail.com">
+                            <input type="hidden" name="form_subject" value="Заявка с сайта Джигит">
 
-                            <input id="name" name="client_name" type="text" placeholder="Ваше имя">
-                            <input type="tel" name="client_phone" placeholder="+7 916 777 7777">
+                            <input id="name" name="client_name" type="text" placeholder="Ваше имя" required="required">
+                            <input type="tel" name="client_phone" placeholder="+7 916 777 7777" required="required">
 
-                            <input type="mail" name="client_mail" placeholder="info@mail.ru">
+                            <input type="mail" name="client_mail" placeholder="info@mail.ru" required="required">
 
                             <button type="submit" class="btn-orrange btn-orrange--fast">
                                 Получить презентацию
@@ -1833,14 +1842,15 @@
 
                     <div class="presentation-form">
                         <div class="djigit-right">
-                            <form action="" class="main-form">
+                            <form id="presentation-form" class="main-form" method="get">
 
                                 <input type="hidden" name="admin_email" value="rumyga@gmail.com">
+                                <input type="hidden" name="form_subject" value="Заявка с сайта Джигит">
 
-                                <input id="name" name="client_name" type="text" placeholder="Ваше имя">
-                                <input type="tel" name="client_phone" placeholder="+7 916 777 7777">
+                                <input type="text" name="client_name" placeholder="Ваше имя" required="required">
+                                <input type="tel" name="client_phone" placeholder="+7 916 777 7777" required="required">
 
-                                <input type="mail" name="client_mail" placeholder="info@mail.ru">
+                                <input type="mail" name="client_mail" placeholder="info@mail.ru" required="required">
 
                                 <button type="submit" class="btn-orrange btn-orrange--fast">
                                     Получить презентацию
@@ -1908,12 +1918,14 @@
 
                             <div class="presentation-form">
                                 <div class="djigit-right">
-                                    <form action="" class="main-form">
+                                    <form action="" class="main-form" method="get">
                                         <input type="hidden" name="admin_email" value="rumyga@gmail.com">
-                                        <input id="name" type="text" placeholder="Ваше имя">
-                                        <input type="tel" placeholder="+7 916 777 7777">
-                                        <input type="mail" placeholder="info@mail.ru">
-                                        <a href="#callback" class="btn-orrange btn-orrange--fast">Получить презентацию</a>
+                                        <input type="hidden" name="form_subject" value="Заявка с сайта Джигит">
+
+                                        <input id="name" name="client_name" type="text" placeholder="Ваше имя">
+                                        <input type="tel" name="client_phone" placeholder="+7 916 777 7777">
+                                        <input type="mail" name="client_mail" placeholder="info@mail.ru">
+                                        <button type="submit" class="btn-orrange btn-orrange--fast">Получить презентацию</button>
                                         <span class="conf-polictic">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных  и соглашаетесь ﻿с <a href="https://docs.google.com/document/d/1r6O2ncErnOISNK88wCtSSK_EEhFcVJT_X5pHIfWnPu8/edit">Политикой конфиденциальности</a></span>
                                     </form>
                                 </div>
@@ -1927,7 +1939,7 @@
             </div>
         </div> <!--inventure-->
 
-        <div id="callback-form" class="callback-form form-big white-popup mfp-hide">
+        <div id="callback-popup" class="callback-form form-big white-popup mfp-hide">
             <div class="callback-wrap">
                 <h2 class="callback-title">
                     Укажите контактные данные и удобное время для звонка
@@ -1937,10 +1949,12 @@
                     Мы перезвоним вам прямо сейчас или в другое рабочее время. Мы работаем пн-пт с 10:00 до 19:00 по мск
                 </p>
 
-                <form action="">
+                <form id="callback-form" method="get">
                     <input type="hidden" name="admin_email" value="rumyga@gmail.com">
-                    <input type="text" placeholder="Ваше имя" required="required">
-                    <input type="tel" placeholder="+7 916 777 7777" required="required">
+                    <input type="hidden" name="form_subject" value="Заявка с сайта Джигит">
+
+                    <input type="text" name="client_name" placeholder="Ваше имя" required="required">
+                    <input type="tel" name="client_phone" placeholder="+7 916 777 7777" required="required">
 
                     <span class="callback-time__title">Когда вам позвонить</span>
 
