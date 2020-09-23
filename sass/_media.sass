@@ -160,7 +160,7 @@
 			&__title
 				font-size: 50px
 				line-height: 55px
-	.getDetailPresent
+	.detailpres
 		&-left
 			width: 40%
 			margin-right: 5%
@@ -356,7 +356,7 @@
 		&-center
 			padding: 0
 			
-	.getDetailPresent
+	.detailpres
 		padding: 0
 		&-left
 			width: 100%
@@ -587,11 +587,10 @@
 				justify-content: center
 				flex-wrap: wrap
 				&-text
-					//display: inline-block
 					color: #fff
 					text-align: center
 					font-size: 25px
-					line-height: 30px
+					line-height: 0
 					white-space: nowrap
 					background-color: transparent
 					&--bottom
@@ -627,6 +626,9 @@
 					content: none
 		.btn-orrange--cat
 			padding: 30px 60px
+		&-sended__center-title
+			&:before
+				content: none
 	.djigit
 		padding-top: 30px
 		&-wrap
@@ -645,79 +647,192 @@
 			flex-direction: column
 			&__item
 				max-width: 100%
+		&-left
+			height: auto
+			&-orange
+				padding: 20px
+			&__title
+				font-size: 30px
+				line-height: 30px
+		&-yellow
+			.yellow-left
+				padding: 20px
+				height: auto
+				&__descr
+					font-size: 16px
+					line-height: 18px
+				h2
+					font-size: 30px
+					line-height: 35px
+					text-align: center
 	.reasons
 		padding-top: 0
 		&-top
 			padding-left: 0
 			text-align: center
 		&-title
-			font-size: 55px
-			line-height: 55px
+			font-size: 30px
+			line-height: 35px
 			&--cost:after
 				display: none
 			&--earnings
-				font-size: 40px
-				line-height: 40px
+				margin-top: 20px
+				font-size: 30px
+				line-height: 35px
 				text-align: center
 			&__prev
 				white-space: nowrap
 				font-size: 20px
 				text-align: center
+				margin-bottom: 10px
 				&:after
 					content: none
 			&__demand
-				font-size: 40px
-				line-height: 40px
+				font-size: 30px
+				line-height: 35px
 				text-align: center
 				&:after
 					content: none
-		.earnings-title
-			text-align: center
+			&__descr
+				margin-top: 20px
+				font-size: 16px
+				line-height: 18px
+			&__chose
+				font-size: 30px
+				line-height: 35px
+		.earnings
+			&-title
+				text-align: center
+				font-size: 16px
+				line-height: 18px
+			&-item
+				padding: 10px
+				&__title
+					font-size: 30px
+					line-height: 35px
+				&__spec
+					font-size: 16px
+					line-height: 18px
+				&__bottom
+					margin-top: 50px
+					font-size: 16px
+					line-height: 18px
+				&--slider
+					img
+						height: 270px
+				&__note
+					font-size: 16px
+					line-height: 18px
 				
 		&-connect
 			display: none
 		&-squares
 			flex-direction: column
 			.squares-item
+				padding: 20px
 				width: 100%
 				height: auto
+				&__title
+					margin-top: 10px
+					font-size: 16px
+					line-height: 18px
+				&__square
+					margin-top: 10px
+					font-size: 16px
+					line-height: 18px
 			&__bottom
 				padding: 10px
-				font-size: 23px
+				font-size: 18px
+				line-height: 20px
 				text-align: justify
 		.demand
+			padding-top: 20px
 			&-items
 				padding: 0 10px
 				flex-direction: column
 			&-item
+				margin-top: 20px
 				max-width: 100%
 				text-align: center
 				&__title
-					font-size: 20px
+					font-size: 18px
+					line-height: 20px
+					&-leaf
+						&:before
+							content: none
 				&__descr
 					&-text
 						font-size: 18px
+				&__price
+					margin-top: 0
 	.form-rules
+		&__inner
+			height: auto
 		&__btn
 			.btn-transparent
-				font-size: 10px
-				line-height: 12px
+				padding: 20px 40px
 	.graph
+		padding-top: 50px
+		padding-bottom: 0
 		&-title
-			font-size: 55px
-			line-height: 55px
+			font-size: 30px
+			line-height: 35px
 			&__descr
-				font-size: 30px
-				line-height: 30px
-				
-	.getDetailPresent
+				font-size: 20px
+				line-height: 25px
+		&-slider
+			&__left
+				padding-top: 60px
+			&__title
+				font-size: 18px
+				line-height: 20px
+				&-note
+					font-size: 16px
+					line-height: 18px
+			&__profit
+				margin-top: 20px
+			&__check
+				margin-top: 20px
+			&__percent
+				margin-top: 20px
+		.slick-dots
+			li
+				button
+					width: 32px
+					height: 32px
+					font-size: 16px
+					line-height: 16px
+	.indicators
 		&-left
-			margin-right: 0
+			display: none
+		&-right
+			display: none
+		&-center
+			margin-top: 0
 			&__title
 				font-size: 30px
 				line-height: 35px
+			&__descr
+				font-size: 16px
+				line-height: 18px
+			&__note
+				font-size: 16px
+				line-height: 18px
+		
+	.detailpres
+		&-left
+			margin-right: 0
+			&__title
+				text-align: center
+				font-size: 30px
+				line-height: 35px
+			&__note
+				text-align: center
+				font-size: 16px
+				line-height: 18px
 		&-center
 			padding: 40px 20px
+
 	.concept
 		&-header
 			&__title
@@ -770,6 +885,7 @@
 		&__btn
 			.btn-white
 				line-height: 20px
+				padding: 30px 105px
 	.pizzeria
 		&-top
 			padding: 0 20px
@@ -785,12 +901,55 @@
 			flex-direction: column
 		&-item
 			width: 100%
-			padding: 60px 20px
+			padding: 30px 20px
 			.tooltip-iterior-show
 				font-size: 12px
 				line-height: 14px
 				width: 200px
 				padding: 10px
+				
+	.experience
+		&-title
+			font-size: 40px
+			line-height: 45px
+		&-note
+			padding: 0 20px
+		&-item
+			&__title
+				font-size: 30px
+				line-height: 35px
+			&__note-orange
+				text-align: center
+			&--leaf-2
+				&:before
+					top: -30px
+	.success
+		&-wrap
+			flex-direction: column
+			align-items: center
+		&-right
+			order: 1
+			&__images
+				&:before
+					content: none
+				&:after
+					content: none
+		&-left
+			order: 2
+		&-title
+			margin-top: 30px
+			font-size: 40px
+			line-height: 45px
+			
+	.questions
+		&-wrap
+			padding: 0 20px
+		&-title
+			font-size: 40px
+			line-height: 40px
+		&-item
+			margin-bottom: 0
+
 	.quote
 		padding: 0
 		&-wrap
@@ -878,8 +1037,149 @@
 		&-bottom__btn
 			padding: 0 20px
 			
+	.contacts
+		padding-bottom: 60px
+		&-wrap
+			padding: 0 20px
+	
+	.map
+		&-title
+			padding: 10px
+		&-left
+			height: 250px
+			left: 0
+			top: 0
+		&-list
+			height: 270px
+			&__item
+				padding: 10px 30px
+				font-size: 14px
+				line-height: 16px
+				&:before
+					left: 10px
+					
+	.quiz
+		&-wrap
+			padding: 0 20px
+		&-title
+			font-size: 40px
+			line-height: 50px
+			&__final
+				&-text
+					position: relative
+					z-index: 2
+		&-section
+			position: relative
+		&-question
+			&-3__title
+				font-size: 16px
+				line-height: 18px
+				//text-align: center
+			&-3__text
+				font-size: 16px
+				line-height: 16px
+			&-3__top
+				padding: 15px
+			&-3__bottom
+				padding: 15px
+		&-final
+			&__manager
+				display: none
+		&-bottom
+			&:before
+				top: 210px
 	.footer
+		&-top
+			flex-direction: column
+			&__buttons
+				flex-direction: row
+				justify-content: center
+				margin-bottom: 20px
+				.btn-transparent
+					margin-right: 10px
+					margin-bottom: 0
+		&-bottom
+			padding: 0 20px
+			justify-content: space-around
+			align-items: center
+			&__left
+				margin-left: 30px
+		
 		&-sended
 			&:before
 				content: none
+		
+	//Poups
+	.ostrov
+		&-line
+			flex-direction: column
+			height: auto
+			&__title
+				font-size: 25px
+				line-height: 27px
+			&__text
+				width: 100%
+				order: 2
+			&__slider
+				order: 1
+				height: 400px
+				width: 100%
+		&-title
+			font-size: 25px
+			line-height: 27px
+		.mfp-close
+			position: absolute
+			top: -50px
+			left: calc(100% - 30px)
+	//Forms
+	.presentation
+		&-title
+			font-size: 30px
+			line-height: 35px
+		
+		&-img
+			display: none
+			&__wrap
+				height: auto
+				img
+					height: 35%
+		.mfp-close
+			top: 40px
+			
+	.callback
+		&-wrap
+			position: relative
+			padding: 20px
+		&-title
+			font-size: 30px
+			line-height: 35px
+		&-form
+			.btns-time
+				.btn-time
+					white-space: nowrap
+					padding: 7px 50px
+			.mfp-close
+				position: absolute
+				top: 50px
+				left: calc(100% - 50px)
 				
+	.main-form
+		input
+			padding: 20px
+			font-size: 16px
+			line-height: 16px
+		.h3
+			font-size: 16px
+			line-height: 18px
+	
+	//Buttons
+	.btn
+		&-transparent
+			&--white
+				padding: 30px 40px
+				font-size: 14px
+				line-height: 14px
+				text-align: center
+				white-space: normal
+		&-orrange
+			padding: 30px 40px
