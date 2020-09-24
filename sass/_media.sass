@@ -199,6 +199,8 @@
 			width: 50%
 			height: 400px
 			background-size: cover
+		&__btn
+			position: relative
 	.quote
 		&:before
 			content: none
@@ -616,14 +618,29 @@
 			&:before
 				right: -132px
 		&-sended
-			&__center-title
-				margin-top: 60px
-				font-size: 50px
-				line-height: 60px
-				&:before
+			&__center
+				&-title
 					margin-top: 60px
-				&:after
-					content: none
+					font-size: 30px
+					line-height: 35px
+					&:before
+						margin-top: 60px
+					&:after
+						content: none
+				&-spec
+					margin-top: 0
+					font-size: 16px
+					line-height: 18px
+					&--img
+						font-size: 16px
+						line-height: 18px
+					&--day
+						margin-top: 0
+			&__catalog
+				width: 100%
+				height: auto
+		.back-tosite
+			margin: 30px 0
 		.btn-orrange--cat
 			padding: 30px 60px
 		&-sended__center-title
@@ -765,6 +782,11 @@
 						font-size: 18px
 				&__price
 					margin-top: 0
+		.info-horeca
+			&:hover
+				.tooltip
+					z-index: 9
+			
 	.form-rules
 		&__inner
 			height: auto
@@ -834,11 +856,17 @@
 			padding: 40px 20px
 
 	.concept
+		padding-top: 0
+		&:before
+			content: none
 		&-header
 			&__title
-				font-size: 40px
+				font-size: 30px
+				line-height: 35px
 			&__descr
 				padding: 0 20px
+				font-size: 16px
+				line-height: 18px
 		&-items
 			flex-direction: column
 		&-item
@@ -846,11 +874,16 @@
 			&--green
 				padding: 30px 20px
 			&__title
-				font-size: 40px
-				line-height: 40px
+				font-size: 30px
+				line-height: 35px
+			&__descr
+				margin-top: 0
+				font-size: 16px
+				line-height: 18px
 			&__icon
 				&-descr
-					font-size: 24px
+					font-size: 16px
+					line-height: 18px
 	.recomend
 		padding: 40px 0
 		&-items
@@ -868,9 +901,13 @@
 			width: 100%
 			&__img
 				img
-					width: 100%
+					width: 80%
+			&__text
+				font-size: 16px
+				line-height: 18px
 	.monitor
 		&-trends
+			padding-bottom: 0
 			flex-direction: column
 			align-items: center
 			&__item
@@ -878,15 +915,25 @@
 				&-title
 					font-size: 30px
 					line-height: 30px
+				&-descr
+					font-size: 16px
+					line-height: 18px
 	.form-invest
 		&__title
-			font-size: 40px
-			line-height: 40px
+			font-size: 30px
+			line-height: 35px
 		&__btn
+			margin-top: 15px
 			.btn-white
+				text-align: center
 				line-height: 20px
-				padding: 30px 105px
+				padding: 20px 40px
+		&__note
+			margin: 0
+			font-size: 16px
+			line-height: 18px
 	.pizzeria
+		padding: 0
 		&-top
 			padding: 0 20px
 			&__prev
@@ -894,9 +941,13 @@
 				text-align: center
 				line-height: 24px
 		&-title
+			margin: 0
 			text-align: center
-			font-size: 40px
-			line-height: 40px
+			font-size: 30px
+			line-height: 35px
+			&__descr
+				font-size: 16px
+				line-height: 18px
 		&-content
 			flex-direction: column
 		&-item
@@ -907,49 +958,18 @@
 				line-height: 14px
 				width: 200px
 				padding: 10px
-				
-	.experience
-		&-title
-			font-size: 40px
-			line-height: 45px
-		&-note
-			padding: 0 20px
-		&-item
+			&__icon
+				margin-top: 10px
 			&__title
-				font-size: 30px
-				line-height: 35px
-			&__note-orange
-				text-align: center
-			&--leaf-2
-				&:before
-					top: -30px
-	.success
-		&-wrap
-			flex-direction: column
-			align-items: center
-		&-right
-			order: 1
-			&__images
-				&:before
-					content: none
-				&:after
-					content: none
-		&-left
-			order: 2
-		&-title
-			margin-top: 30px
-			font-size: 40px
-			line-height: 45px
-			
-	.questions
-		&-wrap
-			padding: 0 20px
-		&-title
-			font-size: 40px
-			line-height: 40px
-		&-item
-			margin-bottom: 0
-
+				margin-top: 10px
+				font-size: 16px
+				line-height: 18px
+			&__descr
+				margin-top: 0
+				font-size: 16px
+				line-height: 18px
+			&__note
+				margin-top: 0
 	.quote
 		padding: 0
 		&-wrap
@@ -961,61 +981,161 @@
 				top: 12%
 				left: 5px
 		&-text
-			font-size: 18px
+			font-size: 16px
+			line-height: 20px
 			padding: 0 40px
+		&-note
+			font-size: 16px
+			line-height: 20px
 		&-btn
 			.btn-transparent
-				font-size: 16px
-				line-height: 18px
-				white-space: inherit
-				text-align: center
+				padding: 20px 40px
+			
 	.guests
 		&-top
 			padding: 0 20px
 		&-title
-			font-size: 40px
-			line-height: 40px
+			font-size: 30px
+			line-height: 35px
+			text-align: center
+		&-note
+			margin-top: 0
+			font-size: 16px
+			line-height: 20px
 			text-align: center
 		&-steps
+			margin-top: 10px
 			&__line
 				flex-direction: column
 				&--mobile
 					flex-direction: row
 					padding: 0 5px
+			&__descr
+				font-size: 16px
+				line-height: 20px
 			&__right
 				max-width: 100%
-		.tooltip-guests-show
-			max-width: 150px
-			top: 40px
-			left: -200px
-			&:before
-				left: 83%
-				top: -14px
-				transform: rotate(90deg)
+
+			
+				
+	.experience
+		padding-top: 0
+		&-title
+			padding: 0 20px
+			font-size: 32px
+			line-height: 35px
+		&-note
+			padding: 0 20px
+		&-content
+			margin-top: 0
+		&-item
+			&__title
+				font-size: 30px
+				line-height: 35px
+			&__note
+				font-size: 16px
+				line-height: 18px
+			&__note-orange
+				text-align: center
+				font-size: 16px
+				line-height: 18px
+			&--leaf-2
+				&:before
+					top: -30px
+		&-bottom
+			&__title
+				margin-top: 40px
+				font-size: 40px
+				line-height: 50px
+			&__note
+				font-size: 30px
+				line-height: 30px
+			&__text
+				font-size: 16px
+				line-height: 20px
+	.success
+		&-title
+			margin-top: 30px
+			font-size: 30px
+			line-height: 35px
+			text-align: center
+		&-wrap
+			flex-direction: column
+			align-items: center
+		&-text
+			margin-top: 20px
+			text-align: justify
+			font-size: 16px
+			line-height: 20px
+		&-right
+			order: 1
+			&__images
+				&:before
+					content: none
+				&:after
+					content: none
+		&-left
+			order: 2
+		.main-form
+			.btn-orrange
+				padding: 20px 40px
+				font-size: 16px
+				line-height: 18px
+				
+	.questions
+		padding-bottom: 0
+		&-wrap
+			padding: 0 20px
+		&-title
+			font-size: 30px
+			line-height: 30px
+		&-content
+			margin-top: 0
+		&-item
+			padding: 10px
+			margin-bottom: 0
+		&-left
+			font-size: 16px
+			line-height: 18px
+		&-answer
+			top: 70px
+			padding: 10px
+			font-size: 16px
+			line-height: 18px
 	.stages
+		&-content
+			margin-top: 20px
+			flex-direction: column
 		&-top
 			padding: 0 20px
 		&-title
 			text-align: center
-			font-size: 40px
-			line-height: 40px
-		&-content
-			flex-direction: column
+			font-size: 30px
+			line-height: 35px
 		&-item
 			max-width: 100%
+			margin-bottom: 10px
 			&:not(:last-child)
 				border-right: none
+			&__descr
+				margin-top: 10px
+				font-size: 16px
+				line-height: 20px
 	.instructions
 		&-title
-			font-size: 28px
-			line-height: 28px
+			font-size: 22px
+			line-height: 26px
 			padding: 0 20px
 		&-content
 			flex-direction: column
 			&__item
 				max-width: 100%
 			&__title
+				margin-bottom: 0
 				font-size: 16px
+				line-height: 18px
+			&__note
+				margin-bottom: 0
 		&-bottom
 			&__note
 				font-size: 16px
@@ -1028,21 +1148,37 @@
 					
 	.reviews
 		&-title
-			font-size: 40px
-			line-height: 45px
+			font-size: 30px
+			line-height: 35px
 		&-people__slider
 			&-right
-				max-width: 60%
+				max-width: 50%
 				text-align: justify
-		&-bottom__btn
-			padding: 0 20px
+				font-size: 16px
+				line-height: 18px
+			&-nav
+				margin-top: 10px
+		&-bottom
+			margin-top: 0
+			&__slider
+				height: auto
+				&-item
+					height: auto
+			&__btn
+				padding: 0 20px
+				.btn-transparent--white
+					padding: 20px 40px
 			
 	.contacts
-		padding-bottom: 60px
+		padding-bottom: 20px
 		&-wrap
 			padding: 0 20px
+		&-number
+			margin-top: 0
+			font-size: 35px
 	
 	.map
+		padding-top: 0
 		&-title
 			padding: 10px
 		&-left
@@ -1059,22 +1195,50 @@
 					left: 10px
 					
 	.quiz
+		&:before
+			content: none
 		&-wrap
 			padding: 0 20px
+			input[type="text"]
+				background: transparent
+				color: #000
+				font-size: 14px
+				line-height: 16px
 		&-title
-			font-size: 40px
-			line-height: 50px
+			font-size: 30px
+			line-height: 35px
 			&__final
 				&-text
 					position: relative
 					z-index: 2
+		&-numbers
+			margin-top: 0
+		&-num
+			width: 40px
+			height: 40px
+			line-height: 25px
+			font-size: 25px
 		&-section
 			position: relative
+		&-form__btn
+			text-align: center
+			width: 45%
+			padding: 20px
+			font-size: 15px
+			line-height: 17px
 		&-question
+			margin: 20px 0
+			font-size: 18px
+			line-height: 20px
+			&-2
+				label
+					padding: 10px
+					height: auto
+					font-size: 16px
 			&-3__title
-				font-size: 16px
-				line-height: 18px
-				//text-align: center
+				text-align: center
+				font-size: 12px
+				line-height: 14px
 			&-3__text
 				font-size: 16px
 				line-height: 16px
@@ -1082,12 +1246,25 @@
 				padding: 15px
 			&-3__bottom
 				padding: 15px
+		&-descr
+			p
+				font-size: 16px
+				line-height: 20px
+			&__link
+				display: block
+				font-size: 14px
+				line-height: 16px
 		&-final
 			&__manager
 				display: none
+		&-specialist__note
+			display: block
+			font-size: 16px
+			line-height: 18px
 		&-bottom
 			&:before
-				top: 210px
+				content: none
+				
 	.footer
 		&-top
 			flex-direction: column
@@ -1104,12 +1281,17 @@
 			align-items: center
 			&__left
 				margin-left: 30px
+				a
+					display: block
+					font-size: 14px
+					line-height: 16px
+					margin-right: 10px
 		
 		&-sended
 			&:before
 				content: none
 		
-	//Poups
+	//Popups
 	.ostrov
 		&-line
 			flex-direction: column
@@ -1133,6 +1315,10 @@
 			left: calc(100% - 30px)
 	//Forms
 	.presentation
+		height: auto
+		padding-top: 60px
+		&-wrap
+			padding: 20px
 		&-title
 			font-size: 30px
 			line-height: 35px
@@ -1144,25 +1330,62 @@
 				img
 					height: 35%
 		.mfp-close
-			top: 40px
+			top: 0
+			left: calc(100% - 30px)
 			
 	.callback
 		&-wrap
 			position: relative
 			padding: 20px
+			&:after
+				content: none
 		&-title
-			font-size: 30px
-			line-height: 35px
+			font-size: 25px
+			line-height: 30px
+		&-text
+			margin-top: 0
+			font-size: 16px
+			line-height: 18px
 		&-form
+			padding-top: 50px
+			height: auto
 			.btns-time
+				position: relative
+				z-index: 1
 				.btn-time
 					white-space: nowrap
-					padding: 7px 50px
+					padding: 7px 30px
 			.mfp-close
 				position: absolute
-				top: 50px
-				left: calc(100% - 50px)
-				
+				top: 6px
+				left: calc(100% - 16px)
+			form
+				input
+					padding: 10px
+					font-size: 14px
+					line-height: 18px
+					
+	.fast-casual
+		height: auto
+		&__content
+			&-left
+			&-title
+				font-size: 25px
+				line-height: 30px
+			&-note
+				font-size: 14px
+				line-height: 16px
+			&-item
+				font-size: 16px
+				line-height: 18px
+		&__form
+			.djigit-right
+				.main-form
+					.h3
+						font-size: 25px
+						line-height: 30px
+					.btn-orrange--fast
+						padding: 42px 140px 42px 47px
 	.main-form
 		input
 			padding: 20px
@@ -1183,3 +1406,18 @@
 				white-space: normal
 		&-orrange
 			padding: 30px 40px
+			
+	
+	//Tooltips
+	.tooltip
+		padding: 10px
+		font-size: 14px
+		line-height: 16px
+		&-guests-show
+			max-width: 150px
+			top: 40px
+			left: -200px
+			&:before
+				left: 83%
+				top: -14px
+				transform: rotate(90deg)
