@@ -62,8 +62,10 @@ section
 	background-color: #fff
 	
 .header
-	height: 120vh
-	background-size: cover
+	height: 115vh
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: 40% 3%
 	padding-top: 35px
 	position: relative
 	z-index: 2
@@ -71,7 +73,7 @@ section
 	&:before
 		position: absolute
 		top: 0
-		left: 35%
+		left: 33.5%
 		width: 300px
 		height: 200px
 		content: ''
@@ -90,8 +92,8 @@ section
 		width: 100%
 		&:before
 			position: absolute
-			bottom: 0
-			left: 58%
+			bottom: 9px
+			left: 72%
 			width: 445px
 			height: 170px
 			content: ''
@@ -100,8 +102,8 @@ section
 			opacity: .3
 		&:after
 			position: absolute
-			bottom: 0
-			left: 82%
+			bottom: 28px
+			left: 88%
 			width: 200px
 			height: 200px
 			content: ''
@@ -168,7 +170,7 @@ section
 			line-height: 38px
 			margin-bottom: 30px
 		&__details
-			margin-top: 140px
+			margin-top: 145px
 			font-family: $default-font
 			font-style: normal
 			font-weight: normal
@@ -281,8 +283,10 @@ section
 	
 			
 .djigit
+	padding: 100px 0 24px
 	&-wrap
 		display: flex
+		justify-content: space-between
 	&-left
 		display: flex
 		flex-direction: column
@@ -323,7 +327,7 @@ section
 		position: relative
 		left: -100px
 		img
-			width: 100%
+			width: 105%
 			height: auto
 	&-right
 		max-width: 480px
@@ -343,7 +347,7 @@ section
 			&-left
 				max-width: 50%
 				width: 100%
-				padding: 300px 160px 0
+				padding: 300px 148px 0
 				background-color: #FFC700
 				display: flex
 				flex-direction: column
@@ -379,10 +383,12 @@ section
 						
 				&__img
 					max-width: 500px
-					width: 100%
+					width: 120%
 					text-align: center
+					display: flex
+					justify-content: center
 					img
-						width: 100%
+						width: 120%
 				&__bottom
 					margin-top: 180px
 					text-align: center
@@ -499,7 +505,7 @@ section
 	&-connect
 		position: absolute
 		top: -20px
-		left: 100%
+		left: 92%
 		display: block
 	&-title
 		position: relative
@@ -678,7 +684,6 @@ section
 		&-items
 			margin: 0 auto
 			padding: 0 325px 0 237px
-			//max-width: 1436px
 			max-width: calc(100% - 244px * 2)
 			width: 100%
 			display: flex
@@ -730,8 +735,6 @@ section
 	.earnings
 		display: flex
 		flex-direction: column
-		&-slider
-			outline: none
 		&-title
 			margin-top: 32px
 			font-family: $default-font
@@ -772,7 +775,7 @@ section
 				line-height: 56px
 				color: $defaultTextColor
 				&--bottom
-					max-width: 278px
+					max-width: 320px
 					width: 100%
 			&__spec
 				position: relative
@@ -827,7 +830,6 @@ section
 		max-width: 1200px
 		width: 100%
 		height: 520px
-		//display: flex
 		flex-direction: column
 		justify-content: center
 		align-items: center
@@ -851,7 +853,12 @@ section
 		text-align: center
 	&__btn
 		margin-top: 30px
-			
+		.btn-transparent--white
+			font-family: $TTHazelnuts-Medium
+			font-weight: bold
+			font-size: 15px
+			line-height: 15px
+
 
 .graph
 	padding-top: 128px
@@ -988,14 +995,14 @@ section
 
 				
 .indicators
-	padding-top: 0
+	padding: 0
 	display: flex
 	justify-content: space-between
 	&-center
 		max-width: 640px
 		width: 100%
 		padding: 0 80px
-		margin-top: 220px
+		margin-top: 235px
 		&__title
 			font-family: $TTNuksFont
 			font-style: normal
@@ -1012,6 +1019,7 @@ section
 			text-align: center
 		&__note
 			margin-top: 30px
+			margin-bottom: 0
 			font-family: $default-font
 			font-style: normal
 			font-weight: normal
@@ -1020,11 +1028,13 @@ section
 			text-align: center
 	&-columns
 		width: calc((100% - 640px / 2))
+		//max-height: 830px
 		img
 			width: 100%
 
 			
 .detailpres
+	position: relative
 	display: flex
 	align-items: center
 	justify-content: center
@@ -1032,6 +1042,19 @@ section
 	background-size: cover
 	background-repeat: no-repeat
 	padding: 232px 0 172px 0
+	&:before
+		content: ''
+		top: -110px
+		right: 114px
+		position: absolute
+		max-width: 340px
+		width: 100%
+		max-height: 525px
+		height: 100%
+		background-image: url("/img/detailpres/bird.png")
+		background-repeat: no-repeat
+		background-size: cover
+		z-index: 2
 	&-center
 		position: relative
 		max-width: 1200px
@@ -1043,10 +1066,10 @@ section
 		background-color: #fff
 		&:before
 			content: ''
-			top: -60px
-			left: -68px
+			top: -82px
+			left: -95px
 			position: absolute
-			max-width: 700px
+			max-width: 720px
 			width: 100%
 			max-height: 350px
 			height: 100%
@@ -1099,6 +1122,16 @@ section
 		background-image: url("/img/concept/concept-leaf-left.png")
 		background-repeat: no-repeat
 		background-size: contain
+	&:after
+		position: absolute
+		top: 184px
+		right: 9%
+		max-width: 165px
+		width: 100%
+		height: 150px
+		content: ''
+		background-image: url("/img/concept/concept-leaf-right.png")
+		background-repeat: no-repeat
 	&-header
 		max-width: 960px
 		width: 100%
@@ -1282,17 +1315,22 @@ section
 	justify-content: space-between
 	&__item
 		width: 50%
+		&--plate
+			background-color: #F9F9F9
+			padding-left: 10px
 		&--right
 			padding: 250px 135px 105px 230px
 			display: flex
 			justify-content: flex-end
-			//border-bottom: 1px solid #000
 		&-img
+			max-width: 750px
 			width: 100%
 			background-color: #F9F9F9
-			padding-left: 110px
+			margin: 0 auto
 			img
 				width: 100%
+				height: 100%
+				object-fit: cover
 		&-title
 			margin: 0 auto
 			font-family: $TTNuksFont
@@ -1313,7 +1351,7 @@ section
 				background-repeat: no-repeat
 			
 		&-wrap
-			max-width: 404px
+			max-width: 406px
 			width: 100%
 			display: flex
 			flex-direction: column
@@ -1443,6 +1481,8 @@ section
 		padding: 120px 60px
 		&--grey
 			background-color: #F9F9F9
+		&--white
+			background-color: #FBFBFB
 		&__num
 			font-family: $TTNuksFont
 			font-style: normal
@@ -1490,7 +1530,7 @@ section
 		padding: 0 124px
 		&:before
 			position: absolute
-			top: calc(50% - 80px)
+			top: 5%
 			left: 0
 			content: ''
 			width: 65px
@@ -1499,7 +1539,7 @@ section
 			background-repeat: no-repeat
 		&:after
 			position: absolute
-			top: calc(50% - 80px)
+			top: 5%
 			right: 120px
 			content: ''
 			width: 65px
@@ -1532,6 +1572,11 @@ section
 		margin-top: 30px
 		max-width: 736px
 		width: 100%
+		.btn-transparent--white
+			font-family: $TTHazelnuts-Medium
+			font-size: 15px
+			line-height: 15px
+			letter-spacing: 0.2em
 
 
 .guests
@@ -1565,7 +1610,7 @@ section
 		line-height: 32px
 	&-steps
 		position: relative
-		margin-top: 90px
+		margin-top: 55px
 		display: flex
 		flex-direction: column
 		&:before
@@ -1578,7 +1623,10 @@ section
 			width: 100px
 			height: 90px
 		&__title
-			padding: 10px 0
+			margin-bottom: 0
+			max-width: 478px
+			width: 100%
+			padding: 0 10px
 			font-family: $TTHazelnuts-Medium
 			font-style: normal
 			font-weight: bold
@@ -1593,14 +1641,17 @@ section
 			align-items: center
 			height: 96px
 			background-color: #FBFBFB
-			//justify-content: space-between
+			&--mobile
+				height: 75px
+				background-color: #fff
 		&__left
-			max-width: 510px
+			max-width: 478px
 			width: 100%
 		&__right
 			max-width: calc(100% - 510px)
 			width: 100%
 		&__name
+			width: 100%
 			display: flex
 			align-items: center
 		&__num
@@ -1719,7 +1770,7 @@ section
 		&__item
 			max-width: 33%
 			width: 100%
-			padding: 0 45px
+			padding: 0 37px
 			display: flex
 			flex-direction: column
 			align-items: center
@@ -1751,6 +1802,7 @@ section
 		margin-top: 35px
 		text-align: center
 		&__note
+			margin-top: 72px
 			font-family: $default-font
 			font-style: normal
 			font-weight: normal
@@ -3064,10 +3116,6 @@ input[type="submit"]
 			color: #289A00
 			border: 2px solid transparent
 			
-
-
-
-			
 .main-form
 	font-family: $default-font
 	font-style: normal
@@ -3113,7 +3161,7 @@ input[type="submit"]
 
 .phone
 	&-number
-		font-family: $default-font
+		font-family: $TTHazelnuts-Medium
 		font-style: normal
 		font-weight: bold
 		font-size: 18px
@@ -3209,35 +3257,44 @@ form
 //Popups
 
 .foodcort
+	position: relative
 	margin: 0 auto
-	max-width: 800px
+	max-width: 1200px
 	width: 100%
-	height: 495px
-	padding: 55px 80px
+	height: auto
 	color: #fff
 	display: flex
 	flex-direction: column
-	justify-content: flex-end
-	background-image: url(../img/foodcort/foodcort.png)
-	background-repeat: no-repeat
-	background-size: cover
+	align-items: center
+	background-color: #F9F9F9
 	&-title
+		margin-bottom: 0
+		padding: 20px 50px 10px
 		font-family: $default-font
 		font-style: normal
 		font-weight: bold
 		font-size: 36px
 		line-height: 36px
+		color: $defaultTextColor
 	&-text
+		text-align: center
+		padding: 0 50px
 		margin-top: 12px
 		font-style: normal
-		font-weight: 500
+		font-weight: bold
 		font-size: 24px
 		line-height: 36px
+		color: $defaultTextColor
+	&-img
+		width: 100%
+		height: 800px
+		img
+			width: 100%
+			height: 800px
+			object-fit: cover
 	.mfp-close
-		top: calc(-100% + 30px)
-		left: 103%
-		position: relative
-		color: transparent
+		top: 10px
+		left: calc(100% + 40px)
 		&:before
 			position: absolute
 			transform: rotate(45deg)
@@ -3246,7 +3303,7 @@ form
 			content: ''
 			width: 3px
 			height: 40px
-			background-color: #C0C0C0
+			background-color: #fff
 		&:after
 			position: absolute
 			transform: rotate(-45deg)
@@ -3255,7 +3312,7 @@ form
 			content: ''
 			width: 3px
 			height: 40px
-			background-color: #C0C0C0
+			background-color: #fff
 			
 
 .ostrov
@@ -3306,6 +3363,8 @@ form
 			list-style-type: none
 			text-align: left
 			padding-left: 0
+		&__img
+			width: 50%
 			&-item
 				margin-top: 30px
 				position: relative
@@ -3326,15 +3385,6 @@ form
 		&__slider
 			position: relative
 			width: 50%
-			&:before
-				position: absolute
-				content: ''
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-				background-image: url("../img/ostrov/slider-top.png")
-				background-repeat: no-repeat
 			&--bottom
 				&:before
 					position: absolute
