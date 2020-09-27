@@ -404,6 +404,7 @@
 						object-fit: contain
 						width: 100%
 						height: 100%
+						
 	.form-invest
 		&:after
 			display: none
@@ -434,9 +435,13 @@
 						padding: 20px
 						width: 100%
 				&-left
+					position: inherit
 					max-width: 100%
 					margin-right: 0
 					margin-bottom: 20px
+				&-right
+					width: 100%
+					text-align: justify
 				&-nav
 					&:after
 						width: 30%
@@ -1169,13 +1174,23 @@
 			font-size: 30px
 			line-height: 35px
 		&-people__slider
+			&-left
+				margin-right: -28px
 			&-right
-				max-width: 50%
-				text-align: justify
 				font-size: 16px
 				line-height: 18px
 			&-nav
 				margin-top: 10px
+				&:after
+					content: none
+				&:before
+					content: none
+			&-name-note--left
+				margin-left: 0
+		&-inner-prev
+			left: 10px
+		&-inner-next
+			right: 10px
 		&-bottom
 			margin-top: 0
 			&__slider
@@ -1255,11 +1270,13 @@
 					font-size: 16px
 			&-3__title
 				text-align: center
-				font-size: 12px
+				font-size: 14px
 				line-height: 14px
 			&-3__text
-				font-size: 16px
-				line-height: 16px
+				display: block
+				text-align: center
+				font-size: 12px
+				line-height: 14px
 			&-3__top
 				padding: 15px
 			&-3__bottom

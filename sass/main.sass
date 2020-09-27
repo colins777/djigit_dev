@@ -1834,11 +1834,17 @@ section
 		letter-spacing: 0.01em
 		text-align: center
 	&-people
-		padding: 0 120px
+		width: 100%
+		//padding: 0 120px
+		display: flex
+		flex-direction: column
+		align-items: center
 		&__slider
 			width: 100%
 			max-width: 960px
 			&-nav
+				max-width: 960px
+				width: 100%
 				position: relative
 				margin-top: 85px
 				display: flex
@@ -1879,30 +1885,36 @@ section
 					background-color: #DDDDDD
 				
 			&-item
-				width: 100%
+				width: 105%
 				outline: none
 				&-wrap
+					position: relative
+					width: 100%
 					display: flex
 					justify-content: space-between
 			&-left
-				max-width: 8%
+				left: -15px
+				position: absolute
+				max-width: 11%
 				width: 100%
-				margin-right: 16%
+				margin-right: 12%
 				display: flex
 				flex-direction: column
 				align-items: center
+				z-index: 99999
 			&-img
 				width: 64px
 				height: 64px
 				border-radius: 50%
+				overflow: hidden
 				img
 					width: 64px
 					height: 64px
 					object-fit: cover
 			&-bottom
-				display: flex
-				flex-direction: column
-				align-items: center
+				text-align: center
+				display: block
+
 			&-name
 				margin-top: 20px
 				display: block
@@ -1911,15 +1923,18 @@ section
 				font-weight: bold
 				font-size: 16px
 				line-height: 24px
-			&-note
-				white-space: nowrap
-				font-family: $default-font
-				font-style: normal
-				font-weight: bold
-				font-size: 16px
-				line-height: 24px
-				color: #707070
+				&-note
+					white-space: nowrap
+					font-family: $default-font
+					font-style: normal
+					font-size: 16px
+					line-height: 24px
+					color: #707070
+					&--left
+						margin-left: 40px
 			&-right
+				margin-left: auto
+				width: 74%
 				text-align: left
 				font-family: $default-font
 				font-style: normal
@@ -1943,8 +1958,14 @@ section
 			max-width: 478px
 			width: 100%
 			margin: 34px auto 0
-			
+			.btn-transparent--white
+				font-family: $TTHazelnuts-Medium
+				letter-spacing: 0.2em
+				font-size: 15px
+				line-height: 15px
+
 .experience
+	padding-top: 70px
 	&-top
 		margin: 0 auto
 	&-title
@@ -1972,10 +1993,11 @@ section
 		flex-direction: column
 		align-items: center
 		background: #FBFBFB
-		padding: 58px 220px
+		padding: 65px 220px
 		margin-bottom: 2px
 		&--orange
 			border: 2px solid $hoverOrange
+			background: #fff
 		&--leaf
 			position: relative
 			&:after
@@ -2014,6 +2036,7 @@ section
 			line-height: 56px
 			text-align: center
 		&__note
+			margin-bottom: 0
 			margin-top: 12px
 			font-family: $default-font
 			font-style: normal
@@ -2022,7 +2045,8 @@ section
 			line-height: 32px
 			text-align: center
 			&-orange
-				margin-top: 15px
+				margin-top: 30px
+				margin-bottom: 0
 				font-family: $default-font
 				font-style: normal
 				font-weight: bold
@@ -2089,13 +2113,11 @@ section
 		left: 0
 		background-image: url(../img/success/menu-left.png)
 		background-repeat: no-repeat
-		//background-size: contain
 	&:after
 		content: ''
 		position: absolute
-		max-width: 500px
-		width: 100%
-		height: 700px
+		width: 350px
+		height: 400px
 		top: 825px
 		left: 0
 		background-image: url(../img/success/hachapuri.png)
@@ -2104,6 +2126,7 @@ section
 		padding-left: 120px
 		display: flex
 	&-title
+		position: relative
 		max-width: 610px
 		width: 100%
 		font-family: $default-font
@@ -2111,6 +2134,15 @@ section
 		font-weight: bold
 		font-size: 48px
 		line-height: 56px
+		&:before
+			content: ''
+			position: absolute
+			width: 150px
+			height: 150px
+			top: -92px
+			left: -48%
+			background-image: url(../img/success/leaf.png)
+			background-repeat: no-repeat
 	&-left
 		margin-right: 120px
 	&-text
@@ -2196,12 +2228,16 @@ section
 			left: calc(100% + 60px)
 			background-image: url(../img/success/hincali.png)
 			background-repeat: no-repeat
-			
+		.btn-orrange--success
+			font-family: $TTHazelnuts-Medium
+			padding: 24px 90px
+
 .questions
 	padding-top: 15px
 	&-wrap
 		padding: 0 125px
 	&-answer
+		width: 100%
 		display: none
 		position: absolute
 		top: 88px
@@ -2215,6 +2251,19 @@ section
 		z-index: 2
 		background-color: #FBFBFB
 		transition: all .5s ease
+		&__wrap
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+		&__item
+			display: flex
+			width: 48%
+			&-title
+				font-weight: bold
+				.normal-font
+					font-weight: normal
+			&-text
+				font-weight: normal
 	&-title
 		font-family: $default-font
 		font-style: normal
@@ -2713,6 +2762,8 @@ section
 			background: #F3F3F3
 			border-radius: 8px
 			padding: 21px
+			.quiz-question-3__title
+				text-align: center
 		input[type=checkbox]:checked + label
 			background-color: #fd7e14
 			color: #fff
@@ -2870,8 +2921,6 @@ section
 			width: 200px
 			height: 160px
 		
-	
-		
 .tooltip
 	position: absolute
 	left: calc(100% + 10px)
@@ -2968,6 +3017,37 @@ section
 				opacity: 1
 	&-experience
 		top: 75px
+		
+	&-spros
+		position: relative
+		border-bottom: 1px dashed rgba(0, 0, 0, 0.4)
+		cursor: pointer
+		&__show
+			opacity: 0
+			position: absolute
+			left: 20px
+			top: calc(100% + 10px)
+			display: block
+			min-width: 245px
+			padding: 8px
+			background-color: $hoverOrange
+			color: #fff
+			font-size: 16px
+			line-height: 20px
+			transition: all .3s ease
+			text-align: center
+			&:before
+				content: ''
+				position: absolute
+				top: -10px
+				left: -10px
+				background-image: url("/img/universal-images/tooltip-top.png")
+				background-repeat: no-repeat
+				width: 17px
+				height: 16px
+		&:hover
+			.tooltip-spros__show
+				opacity: 1
 		
 .info-horeca
 	cursor: pointer
@@ -3161,7 +3241,7 @@ input[type="submit"]
 
 .phone
 	&-number
-		font-family: $TTHazelnuts-Medium
+		//font-family: $TTHazelnuts-Medium
 		font-style: normal
 		font-weight: bold
 		font-size: 18px
@@ -3363,8 +3443,6 @@ form
 			list-style-type: none
 			text-align: left
 			padding-left: 0
-		&__img
-			width: 50%
 			&-item
 				margin-top: 30px
 				position: relative
@@ -3382,6 +3460,8 @@ form
 					height: 8px
 					background-color: $hoverOrange
 					border-radius: 50%
+		&__img
+			width: 50%
 		&__slider
 			position: relative
 			width: 50%

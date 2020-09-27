@@ -305,7 +305,15 @@ $(document).ready(function () {
             },
             almetyevsk: {
                 icon: 'img/map/pin.png'
+            },
+            poltava: {
+                icon: 'img/map/pin.png'
+            },
+
+            krivyiRog: {
+                icon: 'img/map/pin.png'
             }
+
 
         };
 
@@ -323,6 +331,16 @@ $(document).ready(function () {
             {
                 position: new google.maps.LatLng(54.899667, 52.273819),
                 type: 'almetyevsk'
+            },
+
+            {
+                position: new google.maps.LatLng(49.588233, 34.555709),
+                type: 'poltava'
+            },
+
+            {
+                position: new google.maps.LatLng(47.908378, 33.396787),
+                type: 'krivyiRog'
             }
         ];
 
@@ -430,44 +448,58 @@ $(document).ready(function () {
         }
     }
 
-    //Send form
     let userName = '';
     $("form").submit(function() { //Change
-        var th = $(this);
+        let th = $(this);
+        let presentform = $(this).find("input[name='presentation_email']").val();
+        let formID =  $(this).attr('id');
 
-      let formID =  $(this).attr('id');
       userName = $(this).find("input[name='client_name']").val();
         localStorage.setItem('username', userName);
-
        let callNow = $(this).find('#now-btn').hasClass('btn--active');
-        //console.log(callNow);
-      //console.log(userName);
-        console.log(formID);
 
-        $.ajax({
-            type: "GET",
-            url: "/mail.php", //Change
-            data: th.serialize()
-        }).done(function() {
-            setTimeout(function() {
-                // Done Functions
+        if (presentform === 'yes') {
+            $.ajax({
+                type: "POST",
+                url: "/mail.php", //Change
+                data: th.serialize()
+            }).done(function() {
+                setTimeout(function() {
+                    // Done Functions
+                        window.open('http://colins.rhdev.site/presentation.pdf', '_blank');
+                    location.reload();
+                }, 1000);
+            });
+        }
 
-                if (formID === 'fast-casual-form') {
-                    window.location = "http://localhost:3000/form-success-name-3.html";
-                } else if (formID === 'callback-form' && callNow === true) {
-                    window.location = "http://localhost:3000/form-success-now.html";
-                } else if (formID === 'callback-form' && callNow === false) {
-                    window.location = "http://localhost:3000/form-success-intime.html";
-                } else if (formID === 'getPresentation-1' || formID === 'getPresentation-2' || formID === 'presentation-form') {
-                    window.location = "http://localhost:3000/form-presentation-2.html";
-                } else {
-                    //debugger;
-                    window.location = "http://localhost:3000/form-success-name-4.html";
+        else {
+            $.ajax({
+                type: "GET",
+                url: "/telegram.php", //Change
+                data: th.serialize()
+            }).done(function() {
+                setTimeout(function() {
+                    // Done Functions
 
-                    //return;
-                }
-            }, 1000);
-        });
+                    if (formID === 'fast-casual-form') {
+                        window.location = "http://colins.rhdev.site/form-presentation-2.html";
+                    } else if (formID === 'callback-form' && callNow === true || formID === 'quiz-form') {
+                        window.location = "http://colins.rhdev.site/form-success-now.html";
+                    } else if (formID === 'callback-form' && callNow === false) {
+                        window.location = "http://colins.rhdev.site/form-success-intime.html";
+                    }
+                    // else if (formID === 'getPresentation-1' || formID === 'getPresentation-2' || formID === 'presentation-form') {
+                    //     //window.location = "http://localhost:3000/form-presentation-2.html";
+                    //     window.open('http://colins.rhdev.site/presentation.pdf', '_blank');
+                    // }
+                    else {
+                        window.location = "http://colins.rhdev.site/form-success-name-4.html";
+                    }
+                }, 1000);
+            });
+        }
+
+
         return false;
     });
 
@@ -475,23 +507,14 @@ $(document).ready(function () {
    $('.form-change-name').text(formName);
     localStorage.removeItem('username');
 
-    let getSiteUrl = function() {
-        let siteUrl = document.location.host;
-        console.log(siteUrl);
-        $('.back-tosite').attr('href', siteUrl);
-
-    }
 
     anchorNav();
     slickSliders();
     changeNumslidesReviews();
     dropdownQusestions();
-
   quiz();
     callbackForm();
-   // getSiteUrl();
-
-    setTimeout(initMap(), 4000);
+    initMap();
 
 
 
