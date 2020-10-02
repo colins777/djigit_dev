@@ -3,6 +3,8 @@
 
 
 @media screen and (max-width: 1600px)
+	.header
+		background-size: cover
 	.container
 		max-width: 1200px
 		padding: 0 50px
@@ -97,6 +99,9 @@
 					.mezhd-set
 						font-size: 12px
 						line-height: 18px
+		&-descr
+			&__details
+				margin-top: 50px
 	.djigit
 		&-left
 			width: 50%
@@ -326,6 +331,9 @@
 							margin-right: 10px
 					.phone-number
 						margin: 10px auto
+		&-descr
+			&__details
+				padding-bottom: 50px
 	.djigit
 		&-wrap
 			flex-direction: column
@@ -351,6 +359,11 @@
 		&__inner
 			padding: 40px
 			max-width: 600px
+			
+	.foodcort-img
+		height: auto
+		img
+			height: auto
 	.graph
 		&:after
 			content: none
@@ -701,6 +714,8 @@
 				&__descr
 					font-size: 16px
 					line-height: 18px
+				&__img
+					width: 80%
 				h2
 					font-size: 30px
 					line-height: 35px
@@ -802,7 +817,8 @@
 							content: none
 				&__descr
 					&-text
-						font-size: 18px
+						font-size: 16px
+						line-height: 18px
 				&__price
 					margin-top: 0
 		.info-horeca
@@ -816,6 +832,8 @@
 		&__btn
 			.btn-transparent
 				padding: 20px 40px
+				font-weight: normal
+				font-size: 14px
 	.graph
 		padding-top: 50px
 		padding-bottom: 0
@@ -865,6 +883,8 @@
 				line-height: 18px
 		
 	.detailpres
+		&:before
+			content: none
 		&-left
 			margin-right: 0
 			&__title
@@ -877,9 +897,18 @@
 				line-height: 18px
 		&-center
 			padding: 40px 20px
+			&:before
+				left: 0
+				top: 0
+				max-height: 200px
 
 	.concept
 		padding-top: 0
+		&:after
+			top: 6%
+			width: 70px
+			height: 50px
+			background-size: cover
 		&:before
 			content: none
 		&-header
@@ -924,7 +953,7 @@
 			width: 100%
 			&__img
 				img
-					width: 80%
+					width: 70%
 			&__text
 				font-size: 16px
 				line-height: 18px
@@ -949,8 +978,10 @@
 			margin-top: 15px
 			.btn-white
 				text-align: center
-				line-height: 20px
 				padding: 20px 40px
+				font-size: 14px
+				line-height: 16px
+				
 		&__note
 			margin: 0
 			font-size: 16px
@@ -1013,6 +1044,8 @@
 		&-btn
 			.btn-transparent
 				padding: 20px 40px
+				font-size: 14px
+				font-weight: normal
 			
 	.guests
 		&-top
@@ -1102,8 +1135,9 @@
 		.main-form
 			.btn-orrange
 				padding: 20px 40px
-				font-size: 16px
-				line-height: 18px
+				font-size: 14px
+				line-height: 16px
+				font-weight: normal
 				
 	.questions
 		padding-bottom: 0
@@ -1125,6 +1159,10 @@
 			padding: 10px
 			font-size: 16px
 			line-height: 18px
+			&__wrap
+				flex-direction: column
+			&__item
+				width: 100%
 	.stages
 		&-content
 			margin-top: 20px
@@ -1201,6 +1239,9 @@
 				padding: 0 20px
 				.btn-transparent--white
 					padding: 20px 40px
+					font-size: 14px
+					line-height: 16px
+					font-weight: normal
 			
 	.contacts
 		padding-bottom: 20px
@@ -1225,6 +1266,7 @@
 				font-size: 14px
 				line-height: 16px
 				&:before
+					top: 5px
 					left: 10px
 					
 	.quiz
@@ -1325,15 +1367,23 @@
 		&-sended
 			&:before
 				content: none
+			&:after
+				top: -45px
+				width: 100px
+				height: 100px
+				background-size: cover
 		
 	//Popups
 	.ostrov
+		padding: 20px
 		&-line
 			flex-direction: column
 			height: auto
 			&__title
-				font-size: 25px
-				line-height: 27px
+				font-size: 20px
+				line-height: 22px
+			&__img
+				width: 100%
 			&__text
 				width: 100%
 				order: 2
@@ -1341,6 +1391,17 @@
 				order: 1
 				height: 400px
 				width: 100%
+				&-item
+					height: 400px
+				&--bottom
+					&:before
+						height: 400px
+						background-size: cover
+			&__list-item
+				font-size: 16px
+				line-height: 18px
+				&:before
+					top: calc(50% - 4px)
 		&-title
 			font-size: 25px
 			line-height: 27px
@@ -1456,3 +1517,16 @@
 				left: 83%
 				top: -14px
 				transform: rotate(90deg)
+		&-concept
+			&__show
+				min-width: 320px
+				width: 100%
+				left: -150px
+				&:before
+					left: 52%
+			&__btn
+				font-size: 12px
+				line-height: 14px
+				font-weight: normal
+	.concept-item__icon-descr
+		max-width: 200px
