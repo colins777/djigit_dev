@@ -5025,7 +5025,7 @@ section {
 }
 
 .footer-top__right .btn-transparent {
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .footer-top__right .phone-number {
@@ -5696,7 +5696,6 @@ input[type="submit"] {
 .prev-arrow {
   cursor: pointer;
   left: 30px;
-  background-image: url("img/icons/next-arrow.png");
 }
 
 .prev-arrow .arrow-inner-prev {
@@ -8364,6 +8363,12 @@ form {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .footer-top__right {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer-top__buttons {
     -webkit-box-orient: horizontal;

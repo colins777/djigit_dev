@@ -412,8 +412,6 @@ $(document).ready(function () {
     });
 
     function callbackForm () {
-
-
         let D = new Date(),
             //hour = D.getHours(),
             //day = D.getUTCDay();
@@ -456,7 +454,7 @@ $(document).ready(function () {
     }
 
     let userName = '';
-    $("form").submit(function() { //Change
+    $("form").submit(function() {
         let th = $(this);
         let presentform = $(this).find("input[name='presentation_email']").val();
         let formID =  $(this).attr('id');
@@ -482,12 +480,11 @@ $(document).ready(function () {
         else {
             $.ajax({
                 type: "GET",
-                url: "/telegram.php", //Change
+                url: "/telegram.php",
                 data: th.serialize()
             }).done(function() {
                 setTimeout(function() {
                     // Done Functions
-
                     if (formID === 'fast-casual-form') {
                         window.location = "http://colins.rhdev.site/form-presentation-2.html";
                     } else if (formID === 'callback-form' && callNow === true || formID === 'quiz-form') {
@@ -519,14 +516,7 @@ $(document).ready(function () {
     slickSliders();
     changeNumslidesReviews();
     dropdownQusestions();
-  quiz();
+    quiz();
     callbackForm();
     initMap();
-
-
-
 });
-
-/*Multistep Form*/
-/*https://www.youtube.com/watch?v=saabXtJpEvY
-    https://www.youtube.com/watch?v=8onWWl-k7Gw*/
