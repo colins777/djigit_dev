@@ -63,9 +63,10 @@ section
 	
 .header
 	height: 115vh
-	background-size: contain
+	//background-size: contain
+	background-size: cover
 	background-repeat: no-repeat
-	background-position: 40% 3%
+	//background-position: 40% 3%
 	padding-top: 35px
 	position: relative
 	z-index: 2
@@ -972,6 +973,7 @@ section
 			li
 				list-style-type: none
 				button
+					display: inline-block
 					width: 64px
 					height: 64px
 					border-radius: 50%
@@ -987,6 +989,7 @@ section
 					line-height: 40px
 					text-align: center
 					color: $hoverOrange
+					padding: 0
 			li.slick-active
 				button
 					background-color: $hoverOrange
@@ -1950,7 +1953,8 @@ section
 			max-width: 1200px
 			width: 100%
 			height: 800px
-			&-item
+			&-img
+				margin: 0 auto
 				width: 100%
 				height: 800px
 				img
@@ -2242,7 +2246,6 @@ section
 	&-answer
 		width: 100%
 		display: none
-		position: absolute
 		top: 88px
 		left: 0
 		font-family: $default-font
@@ -2250,7 +2253,7 @@ section
 		font-weight: normal
 		font-size: 20px
 		line-height: 32px
-		padding: 24px
+		padding-top: 24px
 		z-index: 2
 		background-color: #FBFBFB
 		transition: all .5s ease
@@ -2258,15 +2261,21 @@ section
 			display: flex
 			flex-wrap: wrap
 			justify-content: space-between
-		&__item
+	&-item
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		width: 100%
+		&__top
+			width: 100%
 			display: flex
-			width: 48%
-			&-title
-				font-weight: bold
-				.normal-font
-					font-weight: normal
-			&-text
+			justify-content: space-between
+		&-title
+			font-weight: bold
+			.normal-font
 				font-weight: normal
+		&-text
+			font-weight: normal
 	&-title
 		font-family: $default-font
 		font-style: normal
@@ -2678,6 +2687,7 @@ section
 			width: 65px
 			height: 65px
 			border-radius: 50%
+			overflow: hidden
 			img
 				object-fit: cover
 				width: 100%
@@ -2811,6 +2821,8 @@ section
 			line-height: 32px
 			text-align: center
 			color: #A3A3A3
+		input[name="client_city"]
+			padding-top: 42px
 		&__manager
 			position: absolute
 			top: 0
@@ -2823,6 +2835,11 @@ section
 			&__photo
 				width: 64px
 				height: 64px
+				overflow: hidden
+				border-radius: 50%
+				img
+					width: 64px
+					height: 64px
 			&__name
 				margin-top: 20px
 				font-style: normal

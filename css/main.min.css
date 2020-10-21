@@ -517,9 +517,8 @@ section {
 
 .header {
   height: 115vh;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 40% 3%;
   padding-top: 35px;
   position: relative;
   z-index: 2;
@@ -1958,6 +1957,7 @@ section {
 }
 
 .graph-slider .slick-dots li button {
+  display: inline-block;
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -1973,6 +1973,7 @@ section {
   line-height: 40px;
   text-align: center;
   color: #FF7A00;
+  padding: 0;
 }
 
 .graph-slider .slick-dots li.slick-active button {
@@ -3514,12 +3515,13 @@ section {
   height: 800px;
 }
 
-.reviews-bottom__slider-item {
+.reviews-bottom__slider-img {
+  margin: 0 auto;
   width: 100%;
   height: 800px;
 }
 
-.reviews-bottom__slider-item img {
+.reviews-bottom__slider-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -3921,7 +3923,6 @@ section {
 .questions-answer {
   width: 100%;
   display: none;
-  position: absolute;
   top: 88px;
   left: 0;
   font-family: "TTHazelnuts-Regular", sans-serif;
@@ -3929,7 +3930,7 @@ section {
   font-weight: normal;
   font-size: 20px;
   line-height: 32px;
-  padding: 24px;
+  padding-top: 24px;
   z-index: 2;
   background-color: #FBFBFB;
   -webkit-transition: all .5s ease;
@@ -3951,23 +3952,44 @@ section {
           justify-content: space-between;
 }
 
-.questions-answer__item {
+.questions-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 48%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
 }
 
-.questions-answer__item-title {
+.questions-item__top {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.questions-item-title {
   font-weight: bold;
 }
 
-.questions-answer__item-title .normal-font {
+.questions-item-title .normal-font {
   font-weight: normal;
 }
 
-.questions-answer__item-text {
+.questions-item-text {
   font-weight: normal;
 }
 
@@ -4617,6 +4639,7 @@ section {
   width: 65px;
   height: 65px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .quiz-specialist__photo img {
@@ -4871,6 +4894,10 @@ section {
   color: #A3A3A3;
 }
 
+.quiz-final input[name="client_city"] {
+  padding-top: 42px;
+}
+
 .quiz-final__manager {
   position: absolute;
   top: 0;
@@ -4894,6 +4921,13 @@ section {
 }
 
 .quiz-final__manager__photo {
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.quiz-final__manager__photo img {
   width: 64px;
   height: 64px;
 }
@@ -7518,6 +7552,12 @@ form {
   }
   .adv-yellow .yellow-left__img {
     width: 80%;
+    height: 112px;
+  }
+  .adv-yellow .yellow-left__img img {
+    height: 112px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .adv-yellow .yellow-left h2 {
     font-size: 30px;
@@ -7958,6 +7998,19 @@ form {
     font-size: 16px;
     line-height: 20px;
   }
+  .quote-img {
+    width: 65px;
+    height: 65px;
+  }
+  .quote-content {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .quote-content__right {
+    width: 70%;
+  }
   .quote-btn .btn-transparent {
     padding: 20px 40px;
     font-size: 14px;
@@ -8028,6 +8081,12 @@ form {
     text-align: center;
     font-size: 16px;
     line-height: 18px;
+  }
+  .experience-item--leaf:after {
+    width: 100px;
+    height: 100px;
+    right: 50px;
+    background-size: cover;
   }
   .experience-item--leaf-2:before {
     top: -30px;
@@ -8279,8 +8338,7 @@ form {
   }
   .quiz-wrap input[type="text"] {
     background: transparent;
-    color: #000;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
   }
   .quiz-title {
@@ -8290,6 +8348,13 @@ form {
   .quiz-title__final-text {
     position: relative;
     z-index: 2;
+  }
+  .quiz-title:after {
+    right: -6%;
+    top: -52px;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
   }
   .quiz-numbers {
     margin-top: 0;
@@ -8356,6 +8421,11 @@ form {
   }
   .quiz-bottom:before {
     content: none;
+  }
+  .quiz input[name="client_city"] {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 16px;
   }
   .footer-top {
     -webkit-box-orient: vertical;

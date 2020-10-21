@@ -34,22 +34,9 @@ $(document).ready(function () {
             nextArrow: '<div class="reviews-arrow reviews-inner-next"></div>'
         });
 
-        $('.reviews-bottom__slider').slick({
-            dots: false,
-            infinite: false,
-            speed: 500,
-            fade: true,
-            cssEase: 'linear',
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            prevArrow: '<div class="nav-arrow prev-arrow"><div class="arrow-inner-prev"></div></div>',
-            nextArrow: '<div class="nav-arrow next-arrow"><div class="arrow-inner-next"></div></div>'
-        });
-
         $('.ostrov-line__slider').slick({
             dots: false,
-            infinite: false,
+            infinite: true,
             speed: 500,
             fade: true,
             cssEase: 'linear',
@@ -99,7 +86,6 @@ $(document).ready(function () {
 
     let dropdownQusestions = function () {
         $('.questions-right').click(function () {
-
             if ((!$(this).find('.questions-right__triangle').hasClass('questions-right__triangle--rotate') ||
                 (!$(this).siblings('.questions-left').hasClass('questions-left--bold'))
             )){
@@ -109,9 +95,7 @@ $(document).ready(function () {
                 $(this).find('.questions-right__triangle').removeClass('questions-right__triangle--rotate');
                 $(this).siblings('.questions-left').removeClass('questions-left--bold');
             }
-
-            $(this).siblings('.questions-answer').toggle();
-
+            $(this).parents().siblings('.questions-answer').toggle();
         });
     };
 
@@ -143,7 +127,6 @@ $(document).ready(function () {
             }
 
         };
-
 
         function showNextQuestion () {
             if (currentSection === sections.length - 1) {
@@ -201,9 +184,7 @@ $(document).ready(function () {
                 backBtn.addClass('not-active');
             }
         })
-
     };
-
 
     function initMap() {
         map = new google.maps.Map(
@@ -341,7 +322,7 @@ $(document).ready(function () {
             },
 
             {
-                position: new google.maps.LatLng(49.588064, 34.555752),
+                position: new google.maps.LatLng(49.587700, 34.555628),
                 type: 'poltava'
             },
 
@@ -471,7 +452,7 @@ $(document).ready(function () {
             }).done(function() {
                 setTimeout(function() {
                     // Done Functions
-                        window.open('http://colins.rhdev.site/presentation.pdf', '_blank');
+                        window.open('http://3test.xyz/presentation.pdf', '_blank');
                     location.reload();
                 }, 1000);
             });
@@ -486,24 +467,22 @@ $(document).ready(function () {
                 setTimeout(function() {
                     // Done Functions
                     if (formID === 'fast-casual-form') {
-                        window.location = "http://colins.rhdev.site/form-presentation-2.html";
+                        window.location = "http://3test.xyz/form-presentation-2.html";
                     } else if (formID === 'callback-form' && callNow === true || formID === 'quiz-form') {
-                        window.location = "http://colins.rhdev.site/form-success-now.html";
+                        window.location = "http://3test.xyz/form-success-now.html";
                     } else if (formID === 'callback-form' && callNow === false) {
-                        window.location = "http://colins.rhdev.site/form-success-intime.html";
+                        window.location = "http://3test.xyz/form-success-intime.html";
                     }
                     // else if (formID === 'getPresentation-1' || formID === 'getPresentation-2' || formID === 'presentation-form') {
                     //     //window.location = "http://localhost:3000/form-presentation-2.html";
-                    //     window.open('http://colins.rhdev.site/presentation.pdf', '_blank');
+                    //     window.open('http://3test.xyz/presentation.pdf', '_blank');
                     // }
                     else {
-                        window.location = "http://colins.rhdev.site/form-success-name-4.html";
+                        window.location = "http://3test.xyz/form-success-name-4.html";
                     }
                 }, 1000);
             });
         }
-
-
         return false;
     });
 

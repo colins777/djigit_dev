@@ -716,6 +716,10 @@
 					line-height: 18px
 				&__img
 					width: 80%
+					height: 112px
+					img
+						height: 112px
+						object-fit: cover
 				h2
 					font-size: 30px
 					line-height: 35px
@@ -1041,6 +1045,13 @@
 		&-note
 			font-size: 16px
 			line-height: 20px
+		&-img
+			width: 65px
+			height: 65px
+		&-content
+			justify-content: center
+			&__right
+				width: 70%
 		&-btn
 			.btn-transparent
 				padding: 20px 40px
@@ -1095,6 +1106,12 @@
 				text-align: center
 				font-size: 16px
 				line-height: 18px
+			&--leaf
+				&:after
+					width: 100px
+					height: 100px
+					right: 50px
+					background-size: cover
 			&--leaf-2
 				&:before
 					top: -30px
@@ -1276,8 +1293,7 @@
 			padding: 0 20px
 			input[type="text"]
 				background: transparent
-				color: #000
-				font-size: 14px
+				font-size: 16px
 				line-height: 16px
 		&-title
 			font-size: 30px
@@ -1286,6 +1302,12 @@
 				&-text
 					position: relative
 					z-index: 2
+			&:after
+				right: -6%
+				top: -52px
+				width: 80px
+				height: 80px
+				background-size: cover
 		&-numbers
 			margin-top: 0
 		&-num
@@ -1341,6 +1363,10 @@
 		&-bottom
 			&:before
 				content: none
+		input[name="client_city"]
+			padding: 20px
+			font-size: 16px
+			line-height: 16px
 				
 	.footer
 		&-top
