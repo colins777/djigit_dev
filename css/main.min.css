@@ -2485,7 +2485,6 @@ section {
 
 .monitor-trends__item--plate {
   background-color: #F9F9F9;
-  padding-left: 10px;
 }
 
 .monitor-trends__item--right {
@@ -2501,8 +2500,8 @@ section {
 }
 
 .monitor-trends__item-img {
-  max-width: 750px;
   width: 100%;
+  height: 100%;
   background-color: #F9F9F9;
   margin: 0 auto;
 }
@@ -7457,13 +7456,6 @@ form {
   .header-wrap:after {
     content: none;
   }
-  .header .btn-orrange--cat {
-    padding: 42px 0 42px 18px;
-    font-size: 14px;
-  }
-  .header .btn-orrange--cat:before {
-    right: -132px;
-  }
   .header-sended__center-title {
     margin-top: 60px;
     font-size: 30px;
@@ -7495,7 +7487,15 @@ form {
     margin: 30px 0;
   }
   .header .btn-orrange--cat {
-    padding: 30px 60px;
+    padding: 30px 53px;
+  }
+  .header .btn-orrange--cat:before {
+    width: 178px;
+    height: 150px;
+    right: -16px;
+    top: 6px;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .header-sended__center-title:before {
     content: none;
@@ -7585,13 +7585,17 @@ form {
     text-align: center;
   }
   .reasons-title__prev {
+    margin: 0 auto 10px;
+    display: block;
     white-space: nowrap;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 17px;
+    border-bottom: none;
+    max-width: 284px;
+    width: 100%;
   }
   .reasons-title__prev:after {
-    content: none;
+    left: 0;
+    width: 100%;
   }
   .reasons-title__demand {
     font-size: 30px;
@@ -7760,6 +7764,7 @@ form {
   .indicators-center__title {
     font-size: 30px;
     line-height: 35px;
+    margin-top: 30px;
   }
   .indicators-center__descr {
     font-size: 16px;
@@ -7797,7 +7802,7 @@ form {
     padding-top: 0;
   }
   .concept:after {
-    top: 6%;
+    top: 4.5%;
     width: 70px;
     height: 50px;
     background-size: cover;
@@ -7926,11 +7931,24 @@ form {
   }
   .pizzeria-top {
     padding: 0 20px;
+    text-align: center;
   }
   .pizzeria-top__prev {
+    position: relative;
     border-bottom: none;
     text-align: center;
     line-height: 24px;
+    max-width: 278px;
+    width: 100%;
+  }
+  .pizzeria-top__prev:after {
+    content: '';
+    position: absolute;
+    width: 91%;
+    bottom: 0;
+    left: 11px;
+    height: 2px;
+    background-color: #000;
   }
   .pizzeria-title {
     margin: 0;
@@ -8093,11 +8111,11 @@ form {
   }
   .experience-bottom__title {
     margin-top: 40px;
-    font-size: 40px;
+    font-size: 45px;
     line-height: 50px;
   }
   .experience-bottom__note {
-    font-size: 30px;
+    font-size: 22px;
     line-height: 30px;
   }
   .experience-bottom__text {
@@ -8109,6 +8127,9 @@ form {
     font-size: 30px;
     line-height: 35px;
     text-align: center;
+  }
+  .success-title:before {
+    content: none;
   }
   .success-wrap {
     -webkit-box-orient: vertical;
@@ -8542,6 +8563,43 @@ form {
     left: -webkit-calc(100% - 30px);
     left: calc(100% - 30px);
   }
+  .inventure-top {
+    padding: 20px;
+  }
+  .inventure-top:after {
+    top: 63%;
+  }
+  .inventure-title {
+    margin-top: 0;
+    font-size: 25px;
+    line-height: 28px;
+  }
+  .inventure-orange {
+    margin-top: 10px;
+  }
+  .inventure-orange__title {
+    margin: 0 auto;
+  }
+  .inventure-orange__descr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .inventure-orange__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .inventure-bottom .presentation-title {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  .inventure .mfp-close {
+    top: -50px;
+    right: -20px;
+  }
   .presentation {
     height: auto;
     padding-top: 60px;
@@ -8679,5 +8737,26 @@ form {
   }
   .concept-item__icon-descr {
     max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-descr__zarab-text {
+    font-size: 22px;
+  }
+  .header .btn-orrange--cat {
+    font-size: 14px;
+    padding: 30px 34px;
+  }
+  .header .btn-orrange--cat:before {
+    right: -22px;
+    width: 165px;
+  }
+  .concept:after {
+    top: 5.5%;
+    right: 2%;
+  }
+  .adv-yellow .yellow-left__img img {
+    height: 96px;
   }
 }

@@ -647,12 +647,6 @@
 		&-wrap
 			&:after
 				content: none
-		
-		.btn-orrange--cat
-			padding: 42px 0 42px 18px
-			font-size: 14px
-			&:before
-				right: -132px
 		&-sended
 			&__center
 				&-title
@@ -678,7 +672,14 @@
 		.back-tosite
 			margin: 30px 0
 		.btn-orrange--cat
-			padding: 30px 60px
+			padding: 30px 53px
+			&:before
+				width: 178px
+				height: 150px
+				right: -16px
+				top: 6px
+				background-repeat: no-repeat
+				background-size: contain
 		&-sended__center-title
 			&:before
 				content: none
@@ -740,12 +741,16 @@
 				line-height: 35px
 				text-align: center
 			&__prev
+				margin: 0 auto 10px
+				display: block
 				white-space: nowrap
-				font-size: 20px
-				text-align: center
-				margin-bottom: 10px
+				font-size: 17px
+				border-bottom: none
+				max-width: 284px
+				width: 100%
 				&:after
-					content: none
+					left: 0
+					width: 100%
 			&__demand
 				font-size: 30px
 				line-height: 35px
@@ -879,6 +884,7 @@
 			&__title
 				font-size: 30px
 				line-height: 35px
+				margin-top: 30px
 			&__descr
 				font-size: 16px
 				line-height: 18px
@@ -909,7 +915,7 @@
 	.concept
 		padding-top: 0
 		&:after
-			top: 6%
+			top: 4.5%
 			width: 70px
 			height: 50px
 			background-size: cover
@@ -994,10 +1000,22 @@
 		padding: 0
 		&-top
 			padding: 0 20px
+			text-align: center
 			&__prev
+				position: relative
 				border-bottom: none
 				text-align: center
 				line-height: 24px
+				max-width: 278px
+				width: 100%
+				&:after
+					content: ''
+					position: absolute
+					width: 91%
+					bottom: 0
+					left: 11px
+					height: 2px
+					background-color: #000
 		&-title
 			margin: 0
 			text-align: center
@@ -1118,10 +1136,10 @@
 		&-bottom
 			&__title
 				margin-top: 40px
-				font-size: 40px
+				font-size: 45px
 				line-height: 50px
 			&__note
-				font-size: 30px
+				font-size: 22px
 				line-height: 30px
 			&__text
 				font-size: 16px
@@ -1132,6 +1150,8 @@
 			font-size: 30px
 			line-height: 35px
 			text-align: center
+			&:before
+				content: none
 		&-wrap
 			flex-direction: column
 			align-items: center
@@ -1438,6 +1458,33 @@
 			top: -50px
 			left: calc(100% - 30px)
 	//Forms
+	.inventure
+		&-top
+			padding: 20px
+			&:after
+				top: 63%
+		&-title
+			margin-top: 0
+			font-size: 25px
+			line-height: 28px
+		&-orange
+			margin-top: 10px
+			&__title
+				margin: 0 auto
+			&__descr
+				flex-direction: column
+				width: 100%
+			&__text
+				font-size: 16px
+				line-height: 20px
+		&-bottom
+			.presentation
+				&-title
+					font-size: 25px
+					line-height: 28px
+		.mfp-close
+			top: -50px
+			right: -20px
 	.presentation
 		height: auto
 		padding-top: 60px
@@ -1492,7 +1539,6 @@
 	.fast-casual
 		height: auto
 		&__content
-			&-left
 			&-title
 				font-size: 25px
 				line-height: 30px
@@ -1558,3 +1604,21 @@
 				font-weight: normal
 	.concept-item__icon-descr
 		max-width: 200px
+		
+@media screen and (max-width: 320px)
+	.header
+		&-descr__zarab-text
+			font-size: 22px
+		.btn-orrange--cat
+			font-size: 14px
+			padding: 30px 34px
+			&:before
+				right: -22px
+				width: 165px
+	.concept
+		&:after
+			top: 5.5%
+			right: 2%
+	.adv-yellow .yellow-left__img
+		img
+			height: 96px
